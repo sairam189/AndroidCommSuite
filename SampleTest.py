@@ -119,6 +119,6 @@ class SampleTest(BluetoothBaseTest):
             self.log.error("Failure to play audio")
             return False
         self.dev.droid.bluetoothDisconnectConnected(self.headset_to_connect)
-        t.join
+        t.join()
         return True
             
