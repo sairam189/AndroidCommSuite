@@ -163,7 +163,7 @@ class CoexKpiTest(BaseTestClass):
 
         status, result = self.dev.run_iperf_client(self.user_params["server_addr"],
                                             self.interval + self.port + " -J")
-        iperf_tp = self.iperf_log_parser(status, result)
+        self.iperf_log_parser(status, result)
         self.iperf_result(uplink=True)
 
     def test_wlan_standalone_tcp_dl(self):
@@ -202,7 +202,7 @@ class CoexKpiTest(BaseTestClass):
 
         status, result = self.dev.run_iperf_client(self.user_params["server_addr"],
                                         self.interval + self.port + " -R"+" -J"+" -u")
-        iperf_tp = self.iperf_log_parser(status, result)
+        self.iperf_log_parser(status, result)
         self.iperf_result(udp=True)
 
     def test_wlan_with_bt_on_tcp_ul(self):
@@ -215,7 +215,7 @@ class CoexKpiTest(BaseTestClass):
 
         status, result = self.dev.run_iperf_client(self.user_params["server_addr"],
                                             self.interval + self.port + " -J")
-        iperf_tp = self.iperf_log_parser(status, result)
+        self.iperf_log_parser(status, result)
         self.iperf_result(uplink=True)
         self.bluetooth_off()
 
@@ -229,7 +229,7 @@ class CoexKpiTest(BaseTestClass):
 
         status, result = self.dev.run_iperf_client(self.user_params["server_addr"],
                                         self.interval + self.port + " -R"+" -J")
-        iperf_tp = self.iperf_log_parser(status, result)
+        self.iperf_log_parser(status, result)
         self.iperf_result()
         self.bluetooth_off()
 
@@ -244,7 +244,7 @@ class CoexKpiTest(BaseTestClass):
 
         status, result = self.dev.run_iperf_client(self.user_params["server_addr"],
                                             self.interval+ self.port + " -J" + " -u")
-        iperf_tp = self.iperf_log_parser(status, result)
+        self.iperf_log_parser(status, result)
         self.iperf_result(udp=True)
         self.bluetooth_off()
 
@@ -258,7 +258,7 @@ class CoexKpiTest(BaseTestClass):
 
         status, result = self.dev.run_iperf_client(self.user_params["server_addr"],
                                         self.interval + self.port + " -R"+" -J" +" -u")
-        iperf_tp = self.iperf_log_parser(status, result)
+        self.iperf_log_parser(status, result)
         self.iperf_result(udp=True)
         self.bluetooth_off()
 
