@@ -121,11 +121,11 @@ class CoexKpiTest(BaseTestClass):
                                      .format(self.port, self.port, self.tag))
                 throughput = result.avg_send_rate
                 self.log.info("IPERF Client TPT : {} Mbits/s".format(
-                    str(round((throughput * 8), 2))))
+                                    str(round((throughput * 8), 2))))
                 result = IPerfResult(self.client_file_name)
                 throughput = result.avg_receive_rate
                 self.log.info("IPERF Server TPT : {} Mbits/s".format(
-                    str(round((throughput * 8), 2))))
+                                    str(round((throughput * 8), 2))))
 
 
 
