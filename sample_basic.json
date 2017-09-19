@@ -1,0 +1,17 @@
+{   "_description": "Sample config file for a Bluetooth testbed.",
+    "testbed":
+    [
+        {
+            "_description": "2 Android devices. This testbed can run tests that require two devices such as BLE, GATT, and SPP tests.",
+            "name": "bluetoothtestbed",
+            "AndroidDevice": ["HT7370200547"]
+
+        }
+    ],
+    "logpath": "/tmp/logs",
+    "testpaths": ["/home/android_sourcecode/android/tools/test/connectivity/acts/tests/sample"],
+	"example_custom_config_param":"custom_param",
+    "network":{"SSID" :  "setupB8930"},
+    "server_addr" : "192.168.1.4"
+
+}
