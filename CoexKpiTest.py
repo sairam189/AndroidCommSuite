@@ -67,7 +67,7 @@ class CoexKpiTest(BaseTestClass):
 
     def bluetooth_on(self):
         '''
-        Turns on the Bluetooth of the android device
+        Turns on the Bluetooth
         '''
 
         if not enable_bluetooth(self.dev.droid, self.dev.ed):
@@ -76,7 +76,7 @@ class CoexKpiTest(BaseTestClass):
 
     def bluetooth_off(self):
         '''
-        Turns off the bluetooth of the android device
+        Turns off the bluetooth
         '''
 
         if not disable_bluetooth(self.dev.droid):
@@ -134,15 +134,11 @@ class CoexKpiTest(BaseTestClass):
 
     def iperf_log_parser(self, status, result):
         '''
-        Accepts the iperf logs and dumps to a file then calculates the throughput
-        Returns throughput on success else throws an error saying iperf failed.
+        Accepts the iperf logs and dumps to a file for throughput calculation.
 
         Args:
             status: True if the iperf has successfully ran
-            result: contains the logs of iperf
-
-        Returns:
-            Throughput from iperf log
+            result: contains the logs of iperf.
         '''
 
         if status:
