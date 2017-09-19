@@ -14,7 +14,7 @@
     "network":{"SSID" :  "setupB8930"},
     "AccessPoint" : "192.168.1.7",
     "server_addr" : "192.168.1.4",
-    "user":"root",
+    "ssh_config":[{"user":"root"},{"host":"192.168.84.1"}],
     "host":"192.168.84.1",
     "networks":[{"ssid":"setupB8930"}]
 
