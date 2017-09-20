@@ -4,7 +4,8 @@
         {
             "_description": "2 Android devices. This testbed can run tests that require two devices such as BLE, GATT, and SPP tests.",
             "name": "bluetoothtestbed",
-            "AndroidDevice": ["HT7370200547"]
+            "AndroidDevice": ["HT7370200547"],
+	    "AccessPoint":[{"ssh_config" : {"user":"root", "host":"192.168.84.1"}}]
 
         }
     ],
@@ -12,10 +13,7 @@
     "testpaths": ["/home/android_sourcecode/android/tools/test/connectivity/acts/tests/sample"],
 	"example_custom_config_param":"custom_param",
     "network":{"SSID" :  "setupB8930"},
-    "AccessPoint" : "192.168.1.7",
     "server_addr" : "192.168.1.4",
-    "user":"root",
-    "host":"192.168.84.1",
     "networks":[{"ssid":"setupB8930"}]
 
 }
