@@ -34,10 +34,10 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         self.path1 = "original_dance_audio.mp3"
         self.duration=30.0
         self.tests = (
-            'test_A2DP_iperf_tcp_ul',
-            'test_A2DP_iperf_tcp_dl',
-            'test_A2DP_iperf_udp_ul',
-            'test_A2DP_iperf_udp_dl'
+            'test_A2DP_iperf_tcp_ul_kpi_017',
+            'test_A2DP_iperf_tcp_dl_kpi_018',
+            'test_A2DP_iperf_udp_ul_kpi_019',
+            'test_A2DP_iperf_udp_dl_kpi_020'
         )
 
     def setup_class(self):
