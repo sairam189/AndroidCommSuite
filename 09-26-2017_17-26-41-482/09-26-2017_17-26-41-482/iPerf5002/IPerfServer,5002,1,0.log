@@ -1,0 +1,195 @@
+{
+	"start":	{
+		"connected":	[{
+				"socket":	5,
+				"local_host":	"192.168.1.4",
+				"local_port":	5002,
+				"remote_host":	"192.168.1.43",
+				"remote_port":	41764
+			}],
+		"version":	"iperf 3.1.3",
+		"system_info":	"Linux test2 3.16.2-mithleshkernel #1 SMP Thu Sep 11 15:38:15 IST 2014 x86_64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 11:57:42 GMT",
+			"timesecs":	1506427062
+		},
+		"accepted_connection":	{
+			"host":	"192.168.1.43",
+			"port":	41763
+		},
+		"cookie":	"localhost.1506427060.884776.575b4bfd",
+		"tcp_mss_default":	1448,
+		"test_start":	{
+			"protocol":	"TCP",
+			"num_streams":	1,
+			"blksize":	131072,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	0
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	5,
+					"start":	0,
+					"end":	1.000084,
+					"seconds":	1.000084,
+					"bytes":	1042560,
+					"bits_per_second":	8339780.097801,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.000084,
+				"seconds":	1.000084,
+				"bytes":	1042560,
+				"bits_per_second":	8339780.097801,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	5,
+					"start":	1.000084,
+					"end":	2.000091,
+					"seconds":	1.000007,
+					"bytes":	881832,
+					"bits_per_second":	7054605.541529,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.000084,
+				"end":	2.000091,
+				"seconds":	1.000007,
+				"bytes":	881832,
+				"bits_per_second":	7054605.541529,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	5,
+					"start":	2.000091,
+					"end":	3.000071,
+					"seconds":	0.999980,
+					"bytes":	1251072,
+					"bits_per_second":	10008776.447374,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.000091,
+				"end":	3.000071,
+				"seconds":	0.999980,
+				"bytes":	1251072,
+				"bits_per_second":	10008776.447374,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	5,
+					"start":	3.000071,
+					"end":	4.000096,
+					"seconds":	1.000025,
+					"bytes":	2712104,
+					"bits_per_second":	21696288.856172,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.000071,
+				"end":	4.000096,
+				"seconds":	1.000025,
+				"bytes":	2712104,
+				"bits_per_second":	21696288.856172,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	5,
+					"start":	4.000096,
+					"end":	5.000064,
+					"seconds":	0.999968,
+					"bytes":	1902672,
+					"bits_per_second":	15221865.938713,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.000096,
+				"end":	5.000064,
+				"seconds":	0.999968,
+				"bytes":	1902672,
+				"bits_per_second":	15221865.938713,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	5,
+					"start":	5.000064,
+					"end":	5.146934,
+					"seconds":	0.146870,
+					"bytes":	288152,
+					"bits_per_second":	15695607.416770,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	5.000064,
+				"end":	5.146934,
+				"seconds":	0.146870,
+				"bytes":	288152,
+				"bits_per_second":	15695607.416770,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"sender":	{
+					"socket":	5,
+					"start":	0,
+					"end":	5.146934,
+					"seconds":	5.146934,
+					"bytes":	0,
+					"bits_per_second":	0
+				},
+				"receiver":	{
+					"socket":	5,
+					"start":	0,
+					"end":	5.146934,
+					"seconds":	5.146934,
+					"bytes":	8078392,
+					"bits_per_second":	12556433.712316
+				}
+			}],
+		"sum_sent":	{
+			"start":	0,
+			"end":	5.146934,
+			"seconds":	5.146934,
+			"bytes":	0,
+			"bits_per_second":	0
+		},
+		"sum_received":	{
+			"start":	0,
+			"end":	5.146934,
+			"seconds":	5.146934,
+			"bytes":	8078392,
+			"bits_per_second":	12556433.712316
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	0.282037,
+			"host_user":	0,
+			"host_system":	0.282037,
+			"remote_total":	0,
+			"remote_user":	0,
+			"remote_system":	0
+		}
+	}
+}
+{
+	"start":	{
+		"connected":	[],
+		"version":	"iperf 3.1.3",
+		"system_info":	"Linux test2 3.16.2-mithleshkernel #1 SMP Thu Sep 11 15:38:15 IST 2014 x86_64"
+	},
+	"intervals":	[],
+	"end":	{
+	},
+	"error":	"interrupt - the server has terminated"
+}

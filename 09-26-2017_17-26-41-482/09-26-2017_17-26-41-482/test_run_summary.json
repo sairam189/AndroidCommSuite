@@ -1,0 +1,137 @@
+{
+    "ControllerInfo": {
+        "AndroidDevice": [
+            {
+                "build_id": "OPR6.170623.012",
+                "build_type": "userdebug",
+                "model": "aosp_marlin",
+                "serial": "HT7370200547"
+            }
+        ]
+    },
+    "Results": [
+        {
+            "Begin Time": 1506427025663,
+            "Details": null,
+            "End Time": 1506427077975,
+            "Extra Errors": {},
+            "Extras": null,
+            "Log Begin Time": "09-26 17:27:05.663",
+            "Log End Time": "09-26 17:27:57.975",
+            "Result": "PASS",
+            "Test Class": "CoexKPITest",
+            "Test Name": "test_A2DP_iperf_tcp_ul",
+            "UID": null
+        },
+        {
+            "Begin Time": 1506427077977,
+            "Details": null,
+            "End Time": 1506427129854,
+            "Extra Errors": {},
+            "Extras": null,
+            "Log Begin Time": "09-26 17:27:57.977",
+            "Log End Time": "09-26 17:28:49.854",
+            "Result": "PASS",
+            "Test Class": "CoexKPITest",
+            "Test Name": "test_A2DP_iperf_tcp_dl",
+            "UID": null
+        },
+        {
+            "Begin Time": 1506427129856,
+            "Details": null,
+            "End Time": 1506427182724,
+            "Extra Errors": {},
+            "Extras": null,
+            "Log Begin Time": "09-26 17:28:49.856",
+            "Log End Time": "09-26 17:29:42.724",
+            "Result": "PASS",
+            "Test Class": "CoexKPITest",
+            "Test Name": "test_A2DP_iperf_udp_ul",
+            "UID": null
+        },
+        {
+            "Begin Time": 1506427182727,
+            "Details": null,
+            "End Time": 1506427237200,
+            "Extra Errors": {},
+            "Extras": null,
+            "Log Begin Time": "09-26 17:29:42.727",
+            "Log End Time": "09-26 17:30:37.200",
+            "Result": "PASS",
+            "Test Class": "CoexKPITest",
+            "Test Name": "test_A2DP_iperf_udp_dl",
+            "UID": null
+        },
+        {
+            "Begin Time": 1506427237203,
+            "Details": null,
+            "End Time": 1506427315299,
+            "Extra Errors": {},
+            "Extras": null,
+            "Log Begin Time": "09-26 17:30:37.203",
+            "Log End Time": "09-26 17:31:55.299",
+            "Result": "PASS",
+            "Test Class": "CoexKPITest",
+            "Test Name": "test_hfp_iperf_tcp_ul",
+            "UID": null
+        },
+        {
+            "Begin Time": 1506427315301,
+            "Details": null,
+            "End Time": 1506427365550,
+            "Extra Errors": {},
+            "Extras": null,
+            "Log Begin Time": "09-26 17:31:55.301",
+            "Log End Time": "09-26 17:32:45.550",
+            "Result": "PASS",
+            "Test Class": "CoexKPITest",
+            "Test Name": "test_hfp_iperf_tcp_dl",
+            "UID": null
+        },
+        {
+            "Begin Time": 1506427365552,
+            "Details": null,
+            "End Time": 1506427401921,
+            "Extra Errors": {},
+            "Extras": null,
+            "Log Begin Time": "09-26 17:32:45.552",
+            "Log End Time": "09-26 17:33:21.921",
+            "Result": "PASS",
+            "Test Class": "CoexKPITest",
+            "Test Name": "test_hfp_iperf_udp_ul",
+            "UID": null
+        },
+        {
+            "Begin Time": 1506427401923,
+            "Details": null,
+            "End Time": 1506427453712,
+            "Extra Errors": {},
+            "Extras": null,
+            "Log Begin Time": "09-26 17:33:21.923",
+            "Log End Time": "09-26 17:34:13.712",
+            "Result": "PASS",
+            "Test Class": "CoexKPITest",
+            "Test Name": "test_hfp_iperf_udp_dl",
+            "UID": null
+        }
+    ],
+    "Summary": {
+        "Blocked": 0,
+        "ControllerInfo": {
+            "AndroidDevice": [
+                {
+                    "build_id": "OPR6.170623.012",
+                    "build_type": "userdebug",
+                    "model": "aosp_marlin",
+                    "serial": "HT7370200547"
+                }
+            ]
+        },
+        "Executed": 8,
+        "Failed": 0,
+        "Passed": 8,
+        "Requested": 8,
+        "Skipped": 0,
+        "Unknown": 0
+    }
+}

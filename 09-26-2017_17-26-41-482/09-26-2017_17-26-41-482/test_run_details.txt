@@ -1,0 +1,1724 @@
+09-26 17:26:41.511 DEBUG Executing run list [('CoexKPITest', None)].
+09-26 17:26:41.511 DEBUG Executing test class CoexKPITest
+09-26 17:26:41.513 DEBUG job.Result(command='which adb', stdout=b'/usr/bin/adb\n', stderr=b'', exit_status=0, duration=0.001802206039428711, did_timeout=False, encoding='utf-8')
+09-26 17:26:41.513 DEBUG cmd: which adb, stdout: /usr/bin/adb, stderr: , ret: 0
+09-26 17:26:41.565 DEBUG job.Result(command='fastboot devices ', stdout=b'', stderr=b'', exit_status=0, duration=0.05145668983459473, did_timeout=False, encoding='utf-8')
+09-26 17:26:41.616 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 root ', stdout=b'adbd is already running as root\n', stderr=b'', exit_status=0, duration=0.05052518844604492, did_timeout=False, encoding='utf-8')
+09-26 17:26:41.617 DEBUG cmd: /usr/bin/adb -s HT7370200547 root , stdout: adbd is already running as root, stderr: , ret: 0
+09-26 17:26:41.621 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 wait-for-device ', stdout=b'', stderr=b'', exit_status=0, duration=0.0041196346282958984, did_timeout=False, encoding='utf-8')
+09-26 17:26:41.621 DEBUG cmd: /usr/bin/adb -s HT7370200547 wait-for-device , stdout: , stderr: , ret: 0
+09-26 17:26:41.626 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 devices ', stdout=b'List of devices attached \nHT7370200547\tdevice\n\n', stderr=b'', exit_status=0, duration=0.004209995269775391, did_timeout=False, encoding='utf-8')
+09-26 17:26:41.626 DEBUG cmd: /usr/bin/adb -s HT7370200547 devices , stdout: List of devices attached 
+HT7370200547	device, stderr: , ret: 0
+09-26 17:26:41.811 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'sqlite3 /data/system/locksettings.db .dump | grep lockscreen.password_type | grep -v alternate'", stdout=b'', stderr=b'', exit_status=0, duration=0.1842954158782959, did_timeout=False, encoding='utf-8')
+09-26 17:26:41.811 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'sqlite3 /data/system/locksettings.db .dump | grep lockscreen.password_type | grep -v alternate', stdout: , stderr: , ret: 0
+09-26 17:26:41.836 INFO [AndroidDevice|HT7370200547] Screen lock is enabled [android_device.py:is_screen_lock_enabled:1337]
+09-26 17:26:41.837 INFO [AndroidDevice|HT7370200547] Unlocking with swipe up [android_device.py:unlock_screen:1376]
+09-26 17:26:42.489 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'input keyevent KEYCODE_SLEEP'", stdout=b'', stderr=b'', exit_status=0, duration=0.6518962383270264, did_timeout=False, encoding='utf-8')
+09-26 17:26:42.490 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'input keyevent KEYCODE_SLEEP', stdout: , stderr: , ret: 0
+09-26 17:26:42.998 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'input keyevent KEYCODE_WAKEUP'", stdout=b'', stderr=b'', exit_status=0, duration=0.5081033706665039, did_timeout=False, encoding='utf-8')
+09-26 17:26:42.998 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'input keyevent KEYCODE_WAKEUP', stdout: , stderr: , ret: 0
+09-26 17:26:43.422 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'input keyevent KEYCODE_MENU'", stdout=b'', stderr=b'', exit_status=0, duration=0.4238758087158203, did_timeout=False, encoding='utf-8')
+09-26 17:26:43.423 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'input keyevent KEYCODE_MENU', stdout: , stderr: , ret: 0
+09-26 17:26:44.520 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'dumpsys window windows | grep -E mCurrentFocus'", stdout=b'  mCurrentFocus=Window{4274b33 u0 com.android.launcher3/com.android.launcher3.Launcher}\n', stderr=b'', exit_status=0, duration=0.09625387191772461, did_timeout=False, encoding='utf-8')
+09-26 17:26:44.521 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'dumpsys window windows | grep -E mCurrentFocus', stdout: mCurrentFocus=Window{4274b33 u0 com.android.launcher3/com.android.launcher3.Launcher}, stderr: , ret: 0
+09-26 17:26:44.523 DEBUG [AndroidDevice|HT7370200547] Current focus window is com.android.launcher3/com.android.launcher3.Launcher [android_device.py:get_my_current_focus_window:1274][android_device.py:is_window_ready:1290][android_device.py:wait_for_window_ready:1301]
+09-26 17:26:45.181 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 shell \'pm list packages | grep -w "package:com.googlecode.android_scripting"\'', stdout=b'package:com.googlecode.android_scripting\n', stderr=b'', exit_status=0, duration=0.6572811603546143, did_timeout=False, encoding='utf-8')
+09-26 17:26:45.181 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'pm list packages | grep -w "package:com.googlecode.android_scripting"', stdout: package:com.googlecode.android_scripting, stderr: , ret: 0
+09-26 17:26:45.530 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'logpersist.stop --clear'", stdout=b'WARNING: killing Settings application to pull in new values\n', stderr=b'', exit_status=0, duration=0.3490910530090332, did_timeout=False, encoding='utf-8')
+09-26 17:26:45.530 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'logpersist.stop --clear', stdout: WARNING: killing Settings application to pull in new values, stderr: , ret: 0
+09-26 17:26:47.102 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'logpersist.start'", stdout=b'logcatd\n751\nWARNING: killing Settings application to pull in new values\n', stderr=b'', exit_status=0, duration=1.5716147422790527, did_timeout=False, encoding='utf-8')
+09-26 17:26:47.103 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'logpersist.start', stdout: logcatd
+751
+WARNING: killing Settings application to pull in new values, stderr: , ret: 0
+09-26 17:26:47.153 DEBUG job.Result(command='fastboot devices ', stdout=b'', stderr=b'', exit_status=0, duration=0.04942965507507324, did_timeout=False, encoding='utf-8')
+09-26 17:26:47.230 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'getprop ro.build.product'", stdout=b'marlin\n', stderr=b'', exit_status=0, duration=0.07664251327514648, did_timeout=False, encoding='utf-8')
+09-26 17:26:47.230 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'getprop ro.build.product', stdout: marlin, stderr: , ret: 0
+09-26 17:26:47.312 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'getprop ro.product.name'", stdout=b'aosp_marlin\n', stderr=b'', exit_status=0, duration=0.08110570907592773, did_timeout=False, encoding='utf-8')
+09-26 17:26:47.312 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'getprop ro.product.name', stdout: aosp_marlin, stderr: , ret: 0
+09-26 17:26:47.315 DEBUG Start standing subprocess with cmd: adb -s HT7370200547 logcat -v threadtime -b all >> /tmp/logs/bluetoothtestbed/09-26-2017_17-26-41-482/AndroidDeviceHT7370200547/adblog,aosp_marlin,HT7370200547.txt
+09-26 17:26:47.471 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'am start -n com.google.android.setupwizard/.SetupWizardExitActivity'", stdout=b'Starting: Intent { cmp=com.google.android.setupwizard/.SetupWizardExitActivity }\nError type 3\nError: Activity class {com.google.android.setupwizard/com.google.android.setupwizard.SetupWizardExitActivity} does not exist.\n', stderr=b'', exit_status=0, duration=0.1555027961730957, did_timeout=False, encoding='utf-8')
+09-26 17:26:47.471 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'am start -n com.google.android.setupwizard/.SetupWizardExitActivity', stdout: Starting: Intent { cmp=com.google.android.setupwizard/.SetupWizardExitActivity }
+Error type 3
+Error: Activity class {com.google.android.setupwizard/com.google.android.setupwizard.SetupWizardExitActivity} does not exist., stderr: , ret: 0
+09-26 17:26:47.479 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 forward tcp:38373 tcp:8080', stdout=b'', stderr=b'', exit_status=0, duration=0.003962039947509766, did_timeout=False, encoding='utf-8')
+09-26 17:26:47.479 DEBUG cmd: /usr/bin/adb -s HT7370200547 forward tcp:38373 tcp:8080, stdout: , stderr: , ret: 0
+09-26 17:26:47.663 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 shell \'ps -A | grep "S com.googlecode.android_scripting"\'', stdout=b'', stderr=b'', exit_status=0, duration=0.18343687057495117, did_timeout=False, encoding='utf-8')
+09-26 17:26:47.663 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'ps -A | grep "S com.googlecode.android_scripting"', stdout: , stderr: , ret: 0
+09-26 17:26:47.787 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 shell \'ps | grep "S com.googlecode.android_scripting"\'', stdout=b'', stderr=b'', exit_status=0, duration=0.12394428253173828, did_timeout=False, encoding='utf-8')
+09-26 17:26:47.788 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'ps | grep "S com.googlecode.android_scripting"', stdout: , stderr: , ret: 0
+09-26 17:26:47.791 DEBUG [AndroidDevice|HT7370200547] apk com.googlecode.android_scripting is not running [android_device.py:get_package_pid:716][android_device.py:is_rogue_sl4a_running:664][android_device.py:get_droid:640]
+09-26 17:26:47.792 INFO [AndroidDevice|HT7370200547] Start sl4a apk [android_device.py:get_droid:644]
+09-26 17:26:48.288 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'pm path com.googlecode.android_scripting'", stdout=b'package:/data/app/com.googlecode.android_scripting-SdVHv4MDc9xDCg0-fwZhJw==/base.apk\n', stderr=b'', exit_status=0, duration=0.4950718879699707, did_timeout=False, encoding='utf-8')
+09-26 17:26:48.288 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'pm path com.googlecode.android_scripting', stdout: package:/data/app/com.googlecode.android_scripting-SdVHv4MDc9xDCg0-fwZhJw==/base.apk, stderr: , ret: 0
+09-26 17:26:48.429 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'am start -a com.googlecode.android_scripting.action.LAUNCH_SERVER --ei com.googlecode.android_scripting.extra.USE_SERVICE_PORT 8080 com.googlecode.android_scripting/.activity.ScriptingLayerServiceLauncher'", stdout=b'Starting: Intent { act=com.googlecode.android_scripting.action.LAUNCH_SERVER cmp=com.googlecode.android_scripting/.activity.ScriptingLayerServiceLauncher (has extras) }\n', stderr=b'', exit_status=0, duration=0.14078140258789062, did_timeout=False, encoding='utf-8')
+09-26 17:26:48.429 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'am start -a com.googlecode.android_scripting.action.LAUNCH_SERVER --ei com.googlecode.android_scripting.extra.USE_SERVICE_PORT 8080 com.googlecode.android_scripting/.activity.ScriptingLayerServiceLauncher', stdout: Starting: Intent { act=com.googlecode.android_scripting.action.LAUNCH_SERVER cmp=com.googlecode.android_scripting/.activity.ScriptingLayerServiceLauncher (has extras) }, stderr: , ret: 0
+09-26 17:26:49.583 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 shell \'ps -A | grep "S com.googlecode.android_scripting"\'', stdout=b'system       27316   615 2248880  57552 SyS_epoll_wait 7627f835d0 S com.googlecode.android_scripting\n', stderr=b'', exit_status=0, duration=0.15196466445922852, did_timeout=False, encoding='utf-8')
+09-26 17:26:49.583 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'ps -A | grep "S com.googlecode.android_scripting"', stdout: system       27316   615 2248880  57552 SyS_epoll_wait 7627f835d0 S com.googlecode.android_scripting, stderr: , ret: 0
+09-26 17:26:49.583 DEBUG SL4A is running
+09-26 17:26:54.601 INFO [AndroidDevice|HT7370200547] Add new sl4a session 1 [android_device.py:start_new_session:1030]
+09-26 17:26:54.602 INFO [AndroidDevice|HT7370200547] Open s4la session 1 [android_device.py:add_new_connection_to_session:1051]
+09-26 17:26:54.688 DEBUG job.Result(command='fastboot devices ', stdout=b'', stderr=b'', exit_status=0, duration=0.06546449661254883, did_timeout=False, encoding='utf-8')
+09-26 17:26:54.756 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'getprop ro.build.product'", stdout=b'marlin\n', stderr=b'', exit_status=0, duration=0.0677042007446289, did_timeout=False, encoding='utf-8')
+09-26 17:26:54.756 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'getprop ro.build.product', stdout: marlin, stderr: , ret: 0
+09-26 17:26:54.821 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'getprop ro.product.name'", stdout=b'aosp_marlin\n', stderr=b'', exit_status=0, duration=0.0647730827331543, did_timeout=False, encoding='utf-8')
+09-26 17:26:54.822 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'getprop ro.product.name', stdout: aosp_marlin, stderr: , ret: 0
+09-26 17:26:54.917 DEBUG job.Result(command='fastboot devices ', stdout=b'', stderr=b'', exit_status=0, duration=0.09558868408203125, did_timeout=False, encoding='utf-8')
+09-26 17:26:55.038 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'getprop ro.build.id'", stdout=b'OPR6.170623.012\n', stderr=b'', exit_status=0, duration=0.12055706977844238, did_timeout=False, encoding='utf-8')
+09-26 17:26:55.039 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'getprop ro.build.id', stdout: OPR6.170623.012, stderr: , ret: 0
+09-26 17:26:55.156 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'getprop ro.build.type'", stdout=b'userdebug\n', stderr=b'', exit_status=0, duration=0.11739420890808105, did_timeout=False, encoding='utf-8')
+09-26 17:26:55.156 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'getprop ro.build.type', stdout: userdebug, stderr: , ret: 0
+09-26 17:26:55.157 INFO Controller AndroidDevice: [{'build_type': 'userdebug', 'build_id': 'OPR6.170623.012', 'serial': 'HT7370200547', 'model': 'aosp_marlin'}]
+09-26 17:26:55.157 DEBUG Found 1 objects for controller AndroidDevice
+09-26 17:26:55.304 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'settings put secure location_providers_allowed -gps'", stdout=b'', stderr=b'', exit_status=0, duration=0.14629793167114258, did_timeout=False, encoding='utf-8')
+09-26 17:26:55.304 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'settings put secure location_providers_allowed -gps', stdout: , stderr: , ret: 0
+09-26 17:26:55.434 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'settings put secure location_providers_allowed -network'", stdout=b'', stderr=b'', exit_status=0, duration=0.13022637367248535, did_timeout=False, encoding='utf-8')
+09-26 17:26:55.435 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'settings put secure location_providers_allowed -network', stdout: , stderr: , ret: 0
+09-26 17:26:55.450 INFO ==========> CoexKPITest <========== [base_test.py:run:631]
+09-26 17:26:55.591 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'wpa_cli -i wlan0 -p -g@android:wpa_wlan0 IFNAME=wlan0 log_level EXCESSIVE'", stdout=b'OK\n', stderr=b'', exit_status=0, duration=0.08702969551086426, did_timeout=False, encoding='utf-8')
+09-26 17:26:55.591 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'wpa_cli -i wlan0 -p -g@android:wpa_wlan0 IFNAME=wlan0 log_level EXCESSIVE', stdout: OK, stderr: , ret: 0
+09-26 17:26:55.594 INFO [AndroidDevice|HT7370200547] wpa_supplicant log change status: OK [wifi_test_utils.py:wifi_test_device_init:676]
+09-26 17:26:55.796 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'halutil -country US'", stdout=b'found interface wlan0\nfound interface p2p0\nsuccessfully initialized HAL; wlan0 = 0x7ea042e5e0\nstarting wifi event loop\ncleaning up HAL\n', stderr=b'', exit_status=0, duration=0.17656946182250977, did_timeout=False, encoding='utf-8')
+09-26 17:26:55.796 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'halutil -country US', stdout: found interface wlan0
+found interface p2p0
+successfully initialized HAL; wlan0 = 0x7ea042e5e0
+starting wifi event loop
+cleaning up HAL, stderr: , ret: 0
+09-26 17:26:55.904 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'settings put secure doze_enabled 0'", stdout=b'', stderr=b'', exit_status=0, duration=0.1074981689453125, did_timeout=False, encoding='utf-8')
+09-26 17:26:55.904 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'settings put secure doze_enabled 0', stdout: , stderr: , ret: 0
+09-26 17:26:55.924 INFO [AndroidDevice|HT7370200547] Starting connection process to Google_test123 [wifi_test_utils.py:_wifi_connect:979]
+09-26 17:27:00.389 DEBUG [AndroidDevice|HT7370200547] Wi-Fi connection result: {'time': 1506427020376, 'name': 'WifiNetworkConnected', 'data': {'supplicant_state': 'completed', 'rssi': -30, 'is_24ghz': True, 'BSSID': '9c:d3:6d:ae:ee:25', 'is_5ghz': False, 'network_id': 78, 'ip_address': 721529024, 'SSID': 'Google_test123', 'link_speed': 144, 'hidden_ssid': False, 'mac_address': '02:00:00:00:00:00'}}. [wifi_test_utils.py:_wifi_connect:986][wifi_test_utils.py:_assert_on_fail_handler:461][wifi_test_utils.py:wifi_connect:955]
+09-26 17:27:00.391 INFO [AndroidDevice|HT7370200547] Connected to Wi-Fi network Google_test123. [wifi_test_utils.py:_wifi_connect:991]
+09-26 17:27:05.653 INFO [AndroidDevice|HT7370200547] Http ping result: {'ResponseMessage': 'OK', 'Date': 1506427079000, 'URL': {'Authority': 'www.google.com', 'Path': '/robots.txt', 'Port': -1, 'Host': 'www.google.com', 'Protocol': 'http'}, 'ContentType': 'text/plain', 'ReadTimeout': 0, 'ResponseCode': 200, 'HeaderFields': {'': ['HTTP/1.0 200 OK'], 'Date': ['Tue, 26 Sep 2017 11:57:59 GMT'], 'X-Android-Selected-Protocol': ['http/1.0'], 'Server': ['sffe'], 'Via': ['1.0 antarjaal.globaledgesoft.com (squid/3.1.10)'], 'Connection': ['keep-alive'], 'Vary': ['Accept-Encoding'], 'X-Android-Sent-Millis': ['1506427025434'], 'Accept-Ranges': ['bytes'], 'Last-Modified': ['Thu, 10 Aug 2017 13:30:00 GMT'], 'X-Content-Type-Options': ['nosniff'], 'X-Cache': ['MISS from antarjaal.globaledgesoft.com'], 'X-Cache-Lookup': ['MISS from antarjaal.globaledgesoft.com:3128'], 'X-XSS-Protection': ['1; mode=block'], 'Content-Type': ['text/plain'], 'Expires': ['Tue, 26 Sep 2017 11:57:59 GMT'], 'Cache-Control': ['private, max-age=0'], 'X-Android-Received-Millis': ['1506427025640'], 'X-Android-Response-Source': ['NETWORK 200']}, 'ContentLength': -1}. [wifi_test_utils.py:validate_connection:1282]
+09-26 17:27:05.665 INFO [Test Case] test_A2DP_iperf_tcp_ul [base_test.py:exec_one_testcase:371]
+09-26 17:27:05.674 DEBUG Start standing subprocess with cmd: iperf3 -s -J -p 5002  > /tmp/logs/iPerf5002/IPerfServer,5002,1,0.log
+09-26 17:27:10.681 INFO /tmp/logs/iPerf5002/IPerfClient,5002,1.log [CoexKPITest.py:setup_test:77]
+09-26 17:27:10.683 INFO Starting music stream [CoexKPITest.py:start_media_stream:203]
+09-26 17:27:10.768 INFO Music is now playing on device HT7370200547 [CoexKPITest.py:start_media_stream:211]
+09-26 17:27:20.863 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:21.918 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:22.977 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:24.022 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:25.067 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:26.130 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:27.208 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:28.262 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:29.322 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:30.353 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:31.402 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:32.453 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:33.511 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:34.564 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:35.578 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:36.632 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:37.697 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:38.756 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:39.780 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:27:47.946 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -w 512K'", stdout=b'{\n\t"start":\t{\n\t\t"connected":\t[{\n\t\t\t\t"socket":\t4,\n\t\t\t\t"local_host":\t"192.168.1.43",\n\t\t\t\t"local_port":\t41764,\n\t\t\t\t"remote_host":\t"192.168.1.4",\n\t\t\t\t"remote_port":\t5002\n\t\t\t}],\n\t\t"version":\t"iperf 3-ANDROID",\n\t\t"system_info":\t"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",\n\t\t"timestamp":\t{\n\t\t\t"time":\t"Tue, 26 Sep 2017 11:57:42 GMT",\n\t\t\t"timesecs":\t1506427062\n\t\t},\n\t\t"connecting_to":\t{\n\t\t\t"host":\t"192.168.1.4",\n\t\t\t"port":\t5002\n\t\t},\n\t\t"cookie":\t"localhost.1506427060.884776.575b4bfd",\n\t\t"tcp_mss_default":\t1448,\n\t\t"test_start":\t{\n\t\t\t"protocol":\t"TCP",\n\t\t\t"num_streams":\t1,\n\t\t\t"blksize":\t131072,\n\t\t\t"omit":\t0,\n\t\t\t"duration":\t5,\n\t\t\t"bytes":\t0,\n\t\t\t"blocks":\t0,\n\t\t\t"reverse":\t0\n\t\t}\n\t},\n\t"intervals":\t[{\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t1.00042,\n\t\t\t\t\t"seconds":\t1.00042,\n\t\t\t\t\t"bytes":\t1516056,\n\t\t\t\t\t"bits_per_second":\t1.21234e+07,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t124528,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t0,\n\t\t\t\t"end":\t1.00042,\n\t\t\t\t"seconds":\t1.00042,\n\t\t\t\t"bytes":\t1516056,\n\t\t\t\t"bits_per_second":\t1.21234e+07,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t1.00042,\n\t\t\t\t\t"end":\t2.00102,\n\t\t\t\t\t"seconds":\t1.0006,\n\t\t\t\t\t"bytes":\t932512,\n\t\t\t\t\t"bits_per_second":\t7.45565e+06,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t165072,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t1.00042,\n\t\t\t\t"end":\t2.00102,\n\t\t\t\t"seconds":\t1.0006,\n\t\t\t\t"bytes":\t932512,\n\t\t\t\t"bits_per_second":\t7.45565e+06,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t2.00102,\n\t\t\t\t\t"end":\t3.00024,\n\t\t\t\t\t"seconds":\t0.999221,\n\t\t\t\t\t"bytes":\t1213424,\n\t\t\t\t\t"bits_per_second":\t9.71496e+06,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t215752,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t2.00102,\n\t\t\t\t"end":\t3.00024,\n\t\t\t\t"seconds":\t0.999221,\n\t\t\t\t"bytes":\t1213424,\n\t\t\t\t"bits_per_second":\t9.71496e+06,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t3.00024,\n\t\t\t\t\t"end":\t4.00025,\n\t\t\t\t\t"seconds":\t1.00001,\n\t\t\t\t\t"bytes":\t2770024,\n\t\t\t\t\t"bits_per_second":\t2.21599e+07,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t215752,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t3.00024,\n\t\t\t\t"end":\t4.00025,\n\t\t\t\t"seconds":\t1.00001,\n\t\t\t\t"bytes":\t2770024,\n\t\t\t\t"bits_per_second":\t2.21599e+07,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t4.00025,\n\t\t\t\t\t"end":\t5.00045,\n\t\t\t\t\t"seconds":\t1.0002,\n\t\t\t\t\t"bytes":\t1789728,\n\t\t\t\t\t"bits_per_second":\t1.4315e+07,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t215752,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t4.00025,\n\t\t\t\t"end":\t5.00045,\n\t\t\t\t"seconds":\t1.0002,\n\t\t\t\t"bytes":\t1789728,\n\t\t\t\t"bits_per_second":\t1.4315e+07,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}],\n\t"end":\t{\n\t\t"streams":\t[{\n\t\t\t\t"sender":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00045,\n\t\t\t\t\t"seconds":\t5.00045,\n\t\t\t\t\t"bytes":\t8221744,\n\t\t\t\t\t"bits_per_second":\t1.31536e+07,\n\t\t\t\t\t"retransmits":\t0\n\t\t\t\t},\n\t\t\t\t"receiver":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00045,\n\t\t\t\t\t"seconds":\t5.00045,\n\t\t\t\t\t"bytes":\t8078392,\n\t\t\t\t\t"bits_per_second":\t1.29243e+07\n\t\t\t\t}\n\t\t\t}],\n\t\t"sum_sent":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00045,\n\t\t\t"seconds":\t5.00045,\n\t\t\t"bytes":\t8221744,\n\t\t\t"bits_per_second":\t1.31536e+07,\n\t\t\t"retransmits":\t0\n\t\t},\n\t\t"sum_received":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00045,\n\t\t\t"seconds":\t5.00045,\n\t\t\t"bytes":\t8078392,\n\t\t\t"bits_per_second":\t1.29243e+07\n\t\t},\n\t\t"cpu_utilization_percent":\t{\n\t\t\t"host_total":\t2.75436,\n\t\t\t"host_user":\t1.25937,\n\t\t\t"host_system":\t1.51124,\n\t\t\t"remote_total":\t0.282037,\n\t\t\t"remote_user":\t0,\n\t\t\t"remote_system":\t0.282037\n\t\t}\n\t}\n}\n', stderr=b'', exit_status=0, duration=7.163950443267822, did_timeout=False, encoding='utf-8')
+09-26 17:27:47.946 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -w 512K', stdout: {
+	"start":	{
+		"connected":	[{
+				"socket":	4,
+				"local_host":	"192.168.1.43",
+				"local_port":	41764,
+				"remote_host":	"192.168.1.4",
+				"remote_port":	5002
+			}],
+		"version":	"iperf 3-ANDROID",
+		"system_info":	"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 11:57:42 GMT",
+			"timesecs":	1506427062
+		},
+		"connecting_to":	{
+			"host":	"192.168.1.4",
+			"port":	5002
+		},
+		"cookie":	"localhost.1506427060.884776.575b4bfd",
+		"tcp_mss_default":	1448,
+		"test_start":	{
+			"protocol":	"TCP",
+			"num_streams":	1,
+			"blksize":	131072,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	0
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	4,
+					"start":	0,
+					"end":	1.00042,
+					"seconds":	1.00042,
+					"bytes":	1516056,
+					"bits_per_second":	1.21234e+07,
+					"retransmits":	0,
+					"snd_cwnd":	124528,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.00042,
+				"seconds":	1.00042,
+				"bytes":	1516056,
+				"bits_per_second":	1.21234e+07,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	1.00042,
+					"end":	2.00102,
+					"seconds":	1.0006,
+					"bytes":	932512,
+					"bits_per_second":	7.45565e+06,
+					"retransmits":	0,
+					"snd_cwnd":	165072,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.00042,
+				"end":	2.00102,
+				"seconds":	1.0006,
+				"bytes":	932512,
+				"bits_per_second":	7.45565e+06,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	2.00102,
+					"end":	3.00024,
+					"seconds":	0.999221,
+					"bytes":	1213424,
+					"bits_per_second":	9.71496e+06,
+					"retransmits":	0,
+					"snd_cwnd":	215752,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.00102,
+				"end":	3.00024,
+				"seconds":	0.999221,
+				"bytes":	1213424,
+				"bits_per_second":	9.71496e+06,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	3.00024,
+					"end":	4.00025,
+					"seconds":	1.00001,
+					"bytes":	2770024,
+					"bits_per_second":	2.21599e+07,
+					"retransmits":	0,
+					"snd_cwnd":	215752,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.00024,
+				"end":	4.00025,
+				"seconds":	1.00001,
+				"bytes":	2770024,
+				"bits_per_second":	2.21599e+07,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	4.00025,
+					"end":	5.00045,
+					"seconds":	1.0002,
+					"bytes":	1789728,
+					"bits_per_second":	1.4315e+07,
+					"retransmits":	0,
+					"snd_cwnd":	215752,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.00025,
+				"end":	5.00045,
+				"seconds":	1.0002,
+				"bytes":	1789728,
+				"bits_per_second":	1.4315e+07,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"sender":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00045,
+					"seconds":	5.00045,
+					"bytes":	8221744,
+					"bits_per_second":	1.31536e+07,
+					"retransmits":	0
+				},
+				"receiver":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00045,
+					"seconds":	5.00045,
+					"bytes":	8078392,
+					"bits_per_second":	1.29243e+07
+				}
+			}],
+		"sum_sent":	{
+			"start":	0,
+			"end":	5.00045,
+			"seconds":	5.00045,
+			"bytes":	8221744,
+			"bits_per_second":	1.31536e+07,
+			"retransmits":	0
+		},
+		"sum_received":	{
+			"start":	0,
+			"end":	5.00045,
+			"seconds":	5.00045,
+			"bytes":	8078392,
+			"bits_per_second":	1.29243e+07
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	2.75436,
+			"host_user":	1.25937,
+			"host_system":	1.51124,
+			"remote_total":	0.282037,
+			"remote_user":	0,
+			"remote_system":	0.282037
+		}
+	}
+}, stderr: , ret: 0
+09-26 17:27:52.952 INFO IPERF Server TPT : 11.97 Mbits/s [CoexKPITest.py:iperf_result:129]
+09-26 17:27:57.959 INFO IPERF Client TPT : 12.54 Mbits/s [CoexKPITest.py:iperf_result:134]
+09-26 17:27:57.974 DEBUG Stop standing subprocess 20589
+09-26 17:27:57.976 INFO [Test Case] test_A2DP_iperf_tcp_ul PASS [base_test.py:_on_pass:253]
+09-26 17:27:57.978 INFO [Test Case] test_A2DP_iperf_tcp_dl [base_test.py:exec_one_testcase:371]
+09-26 17:27:57.993 DEBUG Start standing subprocess with cmd: iperf3 -s -J -p 5002  > /tmp/logs/iPerf5002/IPerfServer,5002,2,0.log
+09-26 17:28:02.997 INFO /tmp/logs/iPerf5002/IPerfClient,5002,2.log [CoexKPITest.py:setup_test:77]
+09-26 17:28:02.999 INFO Starting music stream [CoexKPITest.py:start_media_stream:203]
+09-26 17:28:03.178 INFO Music is now playing on device HT7370200547 [CoexKPITest.py:start_media_stream:211]
+09-26 17:28:13.240 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:14.296 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:15.323 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:16.367 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:17.412 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:18.462 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:19.519 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:20.533 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:21.621 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:22.675 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:23.729 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:24.780 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:25.807 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:26.858 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:27.915 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:28.961 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:29.973 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:31.018 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:32.093 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:33.156 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:28:39.827 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -R -J -w 512K'", stdout=b'{\n\t"start":\t{\n\t\t"connected":\t[{\n\t\t\t\t"socket":\t4,\n\t\t\t\t"local_host":\t"192.168.1.43",\n\t\t\t\t"local_port":\t41766,\n\t\t\t\t"remote_host":\t"192.168.1.4",\n\t\t\t\t"remote_port":\t5002\n\t\t\t}],\n\t\t"version":\t"iperf 3-ANDROID",\n\t\t"system_info":\t"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",\n\t\t"timestamp":\t{\n\t\t\t"time":\t"Tue, 26 Sep 2017 11:58:34 GMT",\n\t\t\t"timesecs":\t1506427114\n\t\t},\n\t\t"connecting_to":\t{\n\t\t\t"host":\t"192.168.1.4",\n\t\t\t"port":\t5002\n\t\t},\n\t\t"cookie":\t"localhost.1506427114.286488.36910e91",\n\t\t"tcp_mss_default":\t1448,\n\t\t"test_start":\t{\n\t\t\t"protocol":\t"TCP",\n\t\t\t"num_streams":\t1,\n\t\t\t"blksize":\t131072,\n\t\t\t"omit":\t0,\n\t\t\t"duration":\t5,\n\t\t\t"bytes":\t0,\n\t\t\t"blocks":\t0,\n\t\t\t"reverse":\t1\n\t\t}\n\t},\n\t"intervals":\t[{\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t1.00013,\n\t\t\t\t\t"seconds":\t1.00013,\n\t\t\t\t\t"bytes":\t1187360,\n\t\t\t\t\t"bits_per_second":\t9.49762e+06,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t0,\n\t\t\t\t"end":\t1.00013,\n\t\t\t\t"seconds":\t1.00013,\n\t\t\t\t"bytes":\t1187360,\n\t\t\t\t"bits_per_second":\t9.49762e+06,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t1.00013,\n\t\t\t\t\t"end":\t2.00033,\n\t\t\t\t\t"seconds":\t1.00019,\n\t\t\t\t\t"bytes":\t734136,\n\t\t\t\t\t"bits_per_second":\t5.87195e+06,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t1.00013,\n\t\t\t\t"end":\t2.00033,\n\t\t\t\t"seconds":\t1.00019,\n\t\t\t\t"bytes":\t734136,\n\t\t\t\t"bits_per_second":\t5.87195e+06,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t2.00033,\n\t\t\t\t\t"end":\t3.00031,\n\t\t\t\t\t"seconds":\t0.999986,\n\t\t\t\t\t"bytes":\t408336,\n\t\t\t\t\t"bits_per_second":\t3.26673e+06,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t2.00033,\n\t\t\t\t"end":\t3.00031,\n\t\t\t\t"seconds":\t0.999986,\n\t\t\t\t"bytes":\t408336,\n\t\t\t\t"bits_per_second":\t3.26673e+06,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t3.00031,\n\t\t\t\t\t"end":\t4.00031,\n\t\t\t\t\t"seconds":\t0.999999,\n\t\t\t\t\t"bytes":\t884728,\n\t\t\t\t\t"bits_per_second":\t7.07783e+06,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t3.00031,\n\t\t\t\t"end":\t4.00031,\n\t\t\t\t"seconds":\t0.999999,\n\t\t\t\t"bytes":\t884728,\n\t\t\t\t"bits_per_second":\t7.07783e+06,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t4.00031,\n\t\t\t\t\t"end":\t5.00241,\n\t\t\t\t\t"seconds":\t1.0021,\n\t\t\t\t\t"bytes":\t1310440,\n\t\t\t\t\t"bits_per_second":\t1.04616e+07,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t4.00031,\n\t\t\t\t"end":\t5.00241,\n\t\t\t\t"seconds":\t1.0021,\n\t\t\t\t"bytes":\t1310440,\n\t\t\t\t"bits_per_second":\t1.04616e+07,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}],\n\t"end":\t{\n\t\t"streams":\t[{\n\t\t\t\t"sender":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00241,\n\t\t\t\t\t"seconds":\t5.00241,\n\t\t\t\t\t"bytes":\t4624912,\n\t\t\t\t\t"bits_per_second":\t7.39629e+06,\n\t\t\t\t\t"retransmits":\t2\n\t\t\t\t},\n\t\t\t\t"receiver":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00241,\n\t\t\t\t\t"seconds":\t5.00241,\n\t\t\t\t\t"bytes":\t4624912,\n\t\t\t\t\t"bits_per_second":\t7.39629e+06\n\t\t\t\t}\n\t\t\t}],\n\t\t"sum_sent":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00241,\n\t\t\t"seconds":\t5.00241,\n\t\t\t"bytes":\t4624912,\n\t\t\t"bits_per_second":\t7.39629e+06,\n\t\t\t"retransmits":\t2\n\t\t},\n\t\t"sum_received":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00241,\n\t\t\t"seconds":\t5.00241,\n\t\t\t"bytes":\t4624912,\n\t\t\t"bits_per_second":\t7.39629e+06\n\t\t},\n\t\t"cpu_utilization_percent":\t{\n\t\t\t"host_total":\t2.514,\n\t\t\t"host_user":\t0.97324,\n\t\t\t"host_system":\t1.55718,\n\t\t\t"remote_total":\t0.023867,\n\t\t\t"remote_user":\t0.00857,\n\t\t\t"remote_system":\t0.015294\n\t\t}\n\t}\n}\n', stderr=b'', exit_status=0, duration=5.669630527496338, did_timeout=False, encoding='utf-8')
+09-26 17:28:39.828 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -R -J -w 512K', stdout: {
+	"start":	{
+		"connected":	[{
+				"socket":	4,
+				"local_host":	"192.168.1.43",
+				"local_port":	41766,
+				"remote_host":	"192.168.1.4",
+				"remote_port":	5002
+			}],
+		"version":	"iperf 3-ANDROID",
+		"system_info":	"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 11:58:34 GMT",
+			"timesecs":	1506427114
+		},
+		"connecting_to":	{
+			"host":	"192.168.1.4",
+			"port":	5002
+		},
+		"cookie":	"localhost.1506427114.286488.36910e91",
+		"tcp_mss_default":	1448,
+		"test_start":	{
+			"protocol":	"TCP",
+			"num_streams":	1,
+			"blksize":	131072,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	1
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	4,
+					"start":	0,
+					"end":	1.00013,
+					"seconds":	1.00013,
+					"bytes":	1187360,
+					"bits_per_second":	9.49762e+06,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.00013,
+				"seconds":	1.00013,
+				"bytes":	1187360,
+				"bits_per_second":	9.49762e+06,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	1.00013,
+					"end":	2.00033,
+					"seconds":	1.00019,
+					"bytes":	734136,
+					"bits_per_second":	5.87195e+06,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.00013,
+				"end":	2.00033,
+				"seconds":	1.00019,
+				"bytes":	734136,
+				"bits_per_second":	5.87195e+06,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	2.00033,
+					"end":	3.00031,
+					"seconds":	0.999986,
+					"bytes":	408336,
+					"bits_per_second":	3.26673e+06,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.00033,
+				"end":	3.00031,
+				"seconds":	0.999986,
+				"bytes":	408336,
+				"bits_per_second":	3.26673e+06,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	3.00031,
+					"end":	4.00031,
+					"seconds":	0.999999,
+					"bytes":	884728,
+					"bits_per_second":	7.07783e+06,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.00031,
+				"end":	4.00031,
+				"seconds":	0.999999,
+				"bytes":	884728,
+				"bits_per_second":	7.07783e+06,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	4.00031,
+					"end":	5.00241,
+					"seconds":	1.0021,
+					"bytes":	1310440,
+					"bits_per_second":	1.04616e+07,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.00031,
+				"end":	5.00241,
+				"seconds":	1.0021,
+				"bytes":	1310440,
+				"bits_per_second":	1.04616e+07,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"sender":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00241,
+					"seconds":	5.00241,
+					"bytes":	4624912,
+					"bits_per_second":	7.39629e+06,
+					"retransmits":	2
+				},
+				"receiver":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00241,
+					"seconds":	5.00241,
+					"bytes":	4624912,
+					"bits_per_second":	7.39629e+06
+				}
+			}],
+		"sum_sent":	{
+			"start":	0,
+			"end":	5.00241,
+			"seconds":	5.00241,
+			"bytes":	4624912,
+			"bits_per_second":	7.39629e+06,
+			"retransmits":	2
+		},
+		"sum_received":	{
+			"start":	0,
+			"end":	5.00241,
+			"seconds":	5.00241,
+			"bytes":	4624912,
+			"bits_per_second":	7.39629e+06
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	2.514,
+			"host_user":	0.97324,
+			"host_system":	1.55718,
+			"remote_total":	0.023867,
+			"remote_user":	0.00857,
+			"remote_system":	0.015294
+		}
+	}
+}, stderr: , ret: 0
+09-26 17:28:44.835 INFO IPERF Client TPT : 6.99 Mbits/s [CoexKPITest.py:iperf_result:117]
+09-26 17:28:49.842 INFO IPERF Server TPT : 7.05 Mbits/s [CoexKPITest.py:iperf_result:122]
+09-26 17:28:49.853 DEBUG Stop standing subprocess 20622
+09-26 17:28:49.855 INFO [Test Case] test_A2DP_iperf_tcp_dl PASS [base_test.py:_on_pass:253]
+09-26 17:28:49.857 INFO [Test Case] test_A2DP_iperf_udp_ul [base_test.py:exec_one_testcase:371]
+09-26 17:28:49.873 DEBUG Start standing subprocess with cmd: iperf3 -s -J -p 5002  > /tmp/logs/iPerf5002/IPerfServer,5002,3,0.log
+09-26 17:28:54.880 INFO /tmp/logs/iPerf5002/IPerfClient,5002,3.log [CoexKPITest.py:setup_test:77]
+09-26 17:28:54.883 INFO Starting music stream [CoexKPITest.py:start_media_stream:203]
+09-26 17:28:54.973 INFO Music is now playing on device HT7370200547 [CoexKPITest.py:start_media_stream:211]
+09-26 17:29:04.998 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:06.061 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:07.125 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:08.175 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:09.235 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:10.284 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:11.333 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:12.395 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:13.455 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:14.549 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:15.576 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:16.629 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:17.674 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:18.740 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:19.787 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:20.808 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:21.842 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:22.911 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:23.963 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:25.000 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:32.700 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -u -b 200M'", stdout=b'{\n\t"start":\t{\n\t\t"connected":\t[{\n\t\t\t\t"socket":\t4,\n\t\t\t\t"local_host":\t"192.168.1.43",\n\t\t\t\t"local_port":\t49525,\n\t\t\t\t"remote_host":\t"192.168.1.4",\n\t\t\t\t"remote_port":\t5002\n\t\t\t}],\n\t\t"version":\t"iperf 3-ANDROID",\n\t\t"system_info":\t"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",\n\t\t"timestamp":\t{\n\t\t\t"time":\t"Tue, 26 Sep 2017 11:59:26 GMT",\n\t\t\t"timesecs":\t1506427166\n\t\t},\n\t\t"connecting_to":\t{\n\t\t\t"host":\t"192.168.1.4",\n\t\t\t"port":\t5002\n\t\t},\n\t\t"cookie":\t"localhost.1506427166.131826.7ab1a96d",\n\t\t"test_start":\t{\n\t\t\t"protocol":\t"UDP",\n\t\t\t"num_streams":\t1,\n\t\t\t"blksize":\t8192,\n\t\t\t"omit":\t0,\n\t\t\t"duration":\t5,\n\t\t\t"bytes":\t0,\n\t\t\t"blocks":\t0,\n\t\t\t"reverse":\t0\n\t\t}\n\t},\n\t"intervals":\t[{\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t1.00087,\n\t\t\t\t\t"seconds":\t1.00087,\n\t\t\t\t\t"bytes":\t212992,\n\t\t\t\t\t"bits_per_second":\t1.70246e+06,\n\t\t\t\t\t"packets":\t26,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t0,\n\t\t\t\t"end":\t1.00087,\n\t\t\t\t"seconds":\t1.00087,\n\t\t\t\t"bytes":\t212992,\n\t\t\t\t"bits_per_second":\t1.70246e+06,\n\t\t\t\t"packets":\t26,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t1.00087,\n\t\t\t\t\t"end":\t2.00051,\n\t\t\t\t\t"seconds":\t0.999644,\n\t\t\t\t\t"bytes":\t147456,\n\t\t\t\t\t"bits_per_second":\t1.18007e+06,\n\t\t\t\t\t"packets":\t18,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t1.00087,\n\t\t\t\t"end":\t2.00051,\n\t\t\t\t"seconds":\t0.999644,\n\t\t\t\t"bytes":\t147456,\n\t\t\t\t"bits_per_second":\t1.18007e+06,\n\t\t\t\t"packets":\t18,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t2.00051,\n\t\t\t\t\t"end":\t3.00041,\n\t\t\t\t\t"seconds":\t0.999899,\n\t\t\t\t\t"bytes":\t90112,\n\t\t\t\t\t"bits_per_second":\t720969,\n\t\t\t\t\t"packets":\t11,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t2.00051,\n\t\t\t\t"end":\t3.00041,\n\t\t\t\t"seconds":\t0.999899,\n\t\t\t\t"bytes":\t90112,\n\t\t\t\t"bits_per_second":\t720969,\n\t\t\t\t"packets":\t11,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t3.00041,\n\t\t\t\t\t"end":\t4.00027,\n\t\t\t\t\t"seconds":\t0.999858,\n\t\t\t\t\t"bytes":\t81920,\n\t\t\t\t\t"bits_per_second":\t655453,\n\t\t\t\t\t"packets":\t10,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t3.00041,\n\t\t\t\t"end":\t4.00027,\n\t\t\t\t"seconds":\t0.999858,\n\t\t\t\t"bytes":\t81920,\n\t\t\t\t"bits_per_second":\t655453,\n\t\t\t\t"packets":\t10,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t4.00027,\n\t\t\t\t\t"end":\t5.00076,\n\t\t\t\t\t"seconds":\t1.00049,\n\t\t\t\t\t"bytes":\t49152,\n\t\t\t\t\t"bits_per_second":\t393023,\n\t\t\t\t\t"packets":\t6,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t4.00027,\n\t\t\t\t"end":\t5.00076,\n\t\t\t\t"seconds":\t1.00049,\n\t\t\t\t"bytes":\t49152,\n\t\t\t\t"bits_per_second":\t393023,\n\t\t\t\t"packets":\t6,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}],\n\t"end":\t{\n\t\t"streams":\t[{\n\t\t\t\t"udp":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00076,\n\t\t\t\t\t"seconds":\t5.00076,\n\t\t\t\t\t"bytes":\t581632,\n\t\t\t\t\t"bits_per_second":\t930469,\n\t\t\t\t\t"jitter_ms":\t76.769,\n\t\t\t\t\t"lost_packets":\t3,\n\t\t\t\t\t"packets":\t70,\n\t\t\t\t\t"lost_percent":\t4.28571\n\t\t\t\t}\n\t\t\t}],\n\t\t"sum":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00076,\n\t\t\t"seconds":\t5.00076,\n\t\t\t"bytes":\t581632,\n\t\t\t"bits_per_second":\t930469,\n\t\t\t"jitter_ms":\t76.769,\n\t\t\t"lost_packets":\t3,\n\t\t\t"packets":\t70,\n\t\t\t"lost_percent":\t4.28571\n\t\t},\n\t\t"cpu_utilization_percent":\t{\n\t\t\t"host_total":\t1.93831,\n\t\t\t"host_user":\t0.254924,\n\t\t\t"host_system":\t1.72078,\n\t\t\t"remote_total":\t0.008673,\n\t\t\t"remote_user":\t0,\n\t\t\t"remote_system":\t0.008675\n\t\t}\n\t}\n}\n', stderr=b'', exit_status=0, duration=6.698166847229004, did_timeout=False, encoding='utf-8')
+09-26 17:29:32.700 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -u -b 200M', stdout: {
+	"start":	{
+		"connected":	[{
+				"socket":	4,
+				"local_host":	"192.168.1.43",
+				"local_port":	49525,
+				"remote_host":	"192.168.1.4",
+				"remote_port":	5002
+			}],
+		"version":	"iperf 3-ANDROID",
+		"system_info":	"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 11:59:26 GMT",
+			"timesecs":	1506427166
+		},
+		"connecting_to":	{
+			"host":	"192.168.1.4",
+			"port":	5002
+		},
+		"cookie":	"localhost.1506427166.131826.7ab1a96d",
+		"test_start":	{
+			"protocol":	"UDP",
+			"num_streams":	1,
+			"blksize":	8192,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	0
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	4,
+					"start":	0,
+					"end":	1.00087,
+					"seconds":	1.00087,
+					"bytes":	212992,
+					"bits_per_second":	1.70246e+06,
+					"packets":	26,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.00087,
+				"seconds":	1.00087,
+				"bytes":	212992,
+				"bits_per_second":	1.70246e+06,
+				"packets":	26,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	1.00087,
+					"end":	2.00051,
+					"seconds":	0.999644,
+					"bytes":	147456,
+					"bits_per_second":	1.18007e+06,
+					"packets":	18,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.00087,
+				"end":	2.00051,
+				"seconds":	0.999644,
+				"bytes":	147456,
+				"bits_per_second":	1.18007e+06,
+				"packets":	18,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	2.00051,
+					"end":	3.00041,
+					"seconds":	0.999899,
+					"bytes":	90112,
+					"bits_per_second":	720969,
+					"packets":	11,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.00051,
+				"end":	3.00041,
+				"seconds":	0.999899,
+				"bytes":	90112,
+				"bits_per_second":	720969,
+				"packets":	11,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	3.00041,
+					"end":	4.00027,
+					"seconds":	0.999858,
+					"bytes":	81920,
+					"bits_per_second":	655453,
+					"packets":	10,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.00041,
+				"end":	4.00027,
+				"seconds":	0.999858,
+				"bytes":	81920,
+				"bits_per_second":	655453,
+				"packets":	10,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	4.00027,
+					"end":	5.00076,
+					"seconds":	1.00049,
+					"bytes":	49152,
+					"bits_per_second":	393023,
+					"packets":	6,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.00027,
+				"end":	5.00076,
+				"seconds":	1.00049,
+				"bytes":	49152,
+				"bits_per_second":	393023,
+				"packets":	6,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"udp":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00076,
+					"seconds":	5.00076,
+					"bytes":	581632,
+					"bits_per_second":	930469,
+					"jitter_ms":	76.769,
+					"lost_packets":	3,
+					"packets":	70,
+					"lost_percent":	4.28571
+				}
+			}],
+		"sum":	{
+			"start":	0,
+			"end":	5.00076,
+			"seconds":	5.00076,
+			"bytes":	581632,
+			"bits_per_second":	930469,
+			"jitter_ms":	76.769,
+			"lost_packets":	3,
+			"packets":	70,
+			"lost_percent":	4.28571
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	1.93831,
+			"host_user":	0.254924,
+			"host_system":	1.72078,
+			"remote_total":	0.008673,
+			"remote_user":	0,
+			"remote_system":	0.008675
+		}
+	}
+}, stderr: , ret: 0
+09-26 17:29:37.706 INFO IPERF Server TPT : 0.0 Mbits/s [CoexKPITest.py:iperf_result:141]
+09-26 17:29:42.709 INFO 0.11092054843902588 [CoexKPITest.py:iperf_result:144]
+09-26 17:29:42.711 INFO IPERF Client TPT : 0.89 Mbits/s [CoexKPITest.py:iperf_result:147]
+09-26 17:29:42.723 DEBUG Stop standing subprocess 20655
+09-26 17:29:42.726 INFO [Test Case] test_A2DP_iperf_udp_ul PASS [base_test.py:_on_pass:253]
+09-26 17:29:42.728 INFO [Test Case] test_A2DP_iperf_udp_dl [base_test.py:exec_one_testcase:371]
+09-26 17:29:42.743 DEBUG Start standing subprocess with cmd: iperf3 -s -J -p 5002  > /tmp/logs/iPerf5002/IPerfServer,5002,4,0.log
+09-26 17:29:47.748 INFO /tmp/logs/iPerf5002/IPerfClient,5002,4.log [CoexKPITest.py:setup_test:77]
+09-26 17:29:47.750 INFO Starting music stream [CoexKPITest.py:start_media_stream:203]
+09-26 17:29:47.917 INFO Music is now playing on device HT7370200547 [CoexKPITest.py:start_media_stream:211]
+09-26 17:29:57.976 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:29:59.036 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:00.068 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:01.127 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:02.182 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:03.243 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:04.299 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:05.344 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:06.404 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:07.459 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:08.519 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:09.581 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:10.619 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:11.675 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:12.738 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:13.793 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:14.826 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:15.845 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:16.905 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:17.965 DEBUG [AndroidDevice|HT7370200547] A2dp Connected device Jabra STEALTH a1.15.0 [CoexKPITest.py:is_a2dp_connected:188][CoexKPITest.py:media_stream_check:227][threading.py:run:868]
+09-26 17:30:27.170 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -R -J -u -b 200M'", stdout=b'{\n\t"start":\t{\n\t\t"connected":\t[{\n\t\t\t\t"socket":\t4,\n\t\t\t\t"local_host":\t"192.168.1.43",\n\t\t\t\t"local_port":\t43986,\n\t\t\t\t"remote_host":\t"192.168.1.4",\n\t\t\t\t"remote_port":\t5002\n\t\t\t}],\n\t\t"version":\t"iperf 3-ANDROID",\n\t\t"system_info":\t"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",\n\t\t"timestamp":\t{\n\t\t\t"time":\t"Tue, 26 Sep 2017 12:00:19 GMT",\n\t\t\t"timesecs":\t1506427219\n\t\t},\n\t\t"connecting_to":\t{\n\t\t\t"host":\t"192.168.1.4",\n\t\t\t"port":\t5002\n\t\t},\n\t\t"cookie":\t"localhost.1506427219.075287.2686539f",\n\t\t"test_start":\t{\n\t\t\t"protocol":\t"UDP",\n\t\t\t"num_streams":\t1,\n\t\t\t"blksize":\t8192,\n\t\t\t"omit":\t0,\n\t\t\t"duration":\t5,\n\t\t\t"bytes":\t0,\n\t\t\t"blocks":\t0,\n\t\t\t"reverse":\t1\n\t\t}\n\t},\n\t"intervals":\t[{\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t1.00022,\n\t\t\t\t\t"seconds":\t1.00022,\n\t\t\t\t\t"bytes":\t1777664,\n\t\t\t\t\t"bits_per_second":\t1.42181e+07,\n\t\t\t\t\t"jitter_ms":\t9.04775,\n\t\t\t\t\t"lost_packets":\t6,\n\t\t\t\t\t"packets":\t223,\n\t\t\t\t\t"lost_percent":\t2.69058,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t0,\n\t\t\t\t"end":\t1.00022,\n\t\t\t\t"seconds":\t1.00022,\n\t\t\t\t"bytes":\t1777664,\n\t\t\t\t"bits_per_second":\t1.42181e+07,\n\t\t\t\t"jitter_ms":\t9.04775,\n\t\t\t\t"lost_packets":\t6,\n\t\t\t\t"packets":\t223,\n\t\t\t\t"lost_percent":\t2.69058,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t1.00022,\n\t\t\t\t\t"end":\t2.00056,\n\t\t\t\t\t"seconds":\t1.00033,\n\t\t\t\t\t"bytes":\t1122304,\n\t\t\t\t\t"bits_per_second":\t8.97544e+06,\n\t\t\t\t\t"jitter_ms":\t4.21864,\n\t\t\t\t\t"lost_packets":\t1017,\n\t\t\t\t\t"packets":\t1154,\n\t\t\t\t\t"lost_percent":\t88.1282,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t1.00022,\n\t\t\t\t"end":\t2.00056,\n\t\t\t\t"seconds":\t1.00033,\n\t\t\t\t"bytes":\t1122304,\n\t\t\t\t"bits_per_second":\t8.97544e+06,\n\t\t\t\t"jitter_ms":\t4.21864,\n\t\t\t\t"lost_packets":\t1017,\n\t\t\t\t"packets":\t1154,\n\t\t\t\t"lost_percent":\t88.1282,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t2.00056,\n\t\t\t\t\t"end":\t3.00041,\n\t\t\t\t\t"seconds":\t0.999853,\n\t\t\t\t\t"bytes":\t933888,\n\t\t\t\t\t"bits_per_second":\t7.4722e+06,\n\t\t\t\t\t"jitter_ms":\t11.4703,\n\t\t\t\t\t"lost_packets":\t1776,\n\t\t\t\t\t"packets":\t1890,\n\t\t\t\t\t"lost_percent":\t93.9683,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t2.00056,\n\t\t\t\t"end":\t3.00041,\n\t\t\t\t"seconds":\t0.999853,\n\t\t\t\t"bytes":\t933888,\n\t\t\t\t"bits_per_second":\t7.4722e+06,\n\t\t\t\t"jitter_ms":\t11.4703,\n\t\t\t\t"lost_packets":\t1776,\n\t\t\t\t"packets":\t1890,\n\t\t\t\t"lost_percent":\t93.9683,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t3.00041,\n\t\t\t\t\t"end":\t4.00034,\n\t\t\t\t\t"seconds":\t0.999933,\n\t\t\t\t\t"bytes":\t1662976,\n\t\t\t\t\t"bits_per_second":\t1.33047e+07,\n\t\t\t\t\t"jitter_ms":\t9.53589,\n\t\t\t\t\t"lost_packets":\t4925,\n\t\t\t\t\t"packets":\t5128,\n\t\t\t\t\t"lost_percent":\t96.0413,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t3.00041,\n\t\t\t\t"end":\t4.00034,\n\t\t\t\t"seconds":\t0.999933,\n\t\t\t\t"bytes":\t1662976,\n\t\t\t\t"bits_per_second":\t1.33047e+07,\n\t\t\t\t"jitter_ms":\t9.53589,\n\t\t\t\t"lost_packets":\t4925,\n\t\t\t\t"packets":\t5128,\n\t\t\t\t"lost_percent":\t96.0413,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t4.00034,\n\t\t\t\t\t"end":\t5.00069,\n\t\t\t\t\t"seconds":\t1.00035,\n\t\t\t\t\t"bytes":\t1155072,\n\t\t\t\t\t"bits_per_second":\t9.23736e+06,\n\t\t\t\t\t"jitter_ms":\t6.15695,\n\t\t\t\t\t"lost_packets":\t2133,\n\t\t\t\t\t"packets":\t2274,\n\t\t\t\t\t"lost_percent":\t93.7995,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t4.00034,\n\t\t\t\t"end":\t5.00069,\n\t\t\t\t"seconds":\t1.00035,\n\t\t\t\t"bytes":\t1155072,\n\t\t\t\t"bits_per_second":\t9.23736e+06,\n\t\t\t\t"jitter_ms":\t6.15695,\n\t\t\t\t"lost_packets":\t2133,\n\t\t\t\t"packets":\t2274,\n\t\t\t\t"lost_percent":\t93.7995,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}],\n\t"end":\t{\n\t\t"streams":\t[{\n\t\t\t\t"udp":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00069,\n\t\t\t\t\t"seconds":\t5.00069,\n\t\t\t\t\t"bytes":\t131645440,\n\t\t\t\t\t"bits_per_second":\t2.10604e+08,\n\t\t\t\t\t"jitter_ms":\t20.8112,\n\t\t\t\t\t"lost_packets":\t14961,\n\t\t\t\t\t"packets":\t16014,\n\t\t\t\t\t"lost_percent":\t93.4245\n\t\t\t\t}\n\t\t\t}],\n\t\t"sum":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00069,\n\t\t\t"seconds":\t5.00069,\n\t\t\t"bytes":\t131645440,\n\t\t\t"bits_per_second":\t2.10604e+08,\n\t\t\t"jitter_ms":\t20.8112,\n\t\t\t"lost_packets":\t14961,\n\t\t\t"packets":\t16014,\n\t\t\t"lost_percent":\t93.4245\n\t\t},\n\t\t"cpu_utilization_percent":\t{\n\t\t\t"host_total":\t1.08786,\n\t\t\t"host_user":\t0.0642424,\n\t\t\t"host_system":\t1.02799,\n\t\t\t"remote_total":\t1.03102,\n\t\t\t"remote_user":\t0.127585,\n\t\t\t"remote_system":\t0.903434\n\t\t}\n\t}\n}\n', stderr=b'', exit_status=0, duration=8.203766345977783, did_timeout=False, encoding='utf-8')
+09-26 17:30:27.171 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -R -J -u -b 200M', stdout: {
+	"start":	{
+		"connected":	[{
+				"socket":	4,
+				"local_host":	"192.168.1.43",
+				"local_port":	43986,
+				"remote_host":	"192.168.1.4",
+				"remote_port":	5002
+			}],
+		"version":	"iperf 3-ANDROID",
+		"system_info":	"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 12:00:19 GMT",
+			"timesecs":	1506427219
+		},
+		"connecting_to":	{
+			"host":	"192.168.1.4",
+			"port":	5002
+		},
+		"cookie":	"localhost.1506427219.075287.2686539f",
+		"test_start":	{
+			"protocol":	"UDP",
+			"num_streams":	1,
+			"blksize":	8192,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	1
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	4,
+					"start":	0,
+					"end":	1.00022,
+					"seconds":	1.00022,
+					"bytes":	1777664,
+					"bits_per_second":	1.42181e+07,
+					"jitter_ms":	9.04775,
+					"lost_packets":	6,
+					"packets":	223,
+					"lost_percent":	2.69058,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.00022,
+				"seconds":	1.00022,
+				"bytes":	1777664,
+				"bits_per_second":	1.42181e+07,
+				"jitter_ms":	9.04775,
+				"lost_packets":	6,
+				"packets":	223,
+				"lost_percent":	2.69058,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	1.00022,
+					"end":	2.00056,
+					"seconds":	1.00033,
+					"bytes":	1122304,
+					"bits_per_second":	8.97544e+06,
+					"jitter_ms":	4.21864,
+					"lost_packets":	1017,
+					"packets":	1154,
+					"lost_percent":	88.1282,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.00022,
+				"end":	2.00056,
+				"seconds":	1.00033,
+				"bytes":	1122304,
+				"bits_per_second":	8.97544e+06,
+				"jitter_ms":	4.21864,
+				"lost_packets":	1017,
+				"packets":	1154,
+				"lost_percent":	88.1282,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	2.00056,
+					"end":	3.00041,
+					"seconds":	0.999853,
+					"bytes":	933888,
+					"bits_per_second":	7.4722e+06,
+					"jitter_ms":	11.4703,
+					"lost_packets":	1776,
+					"packets":	1890,
+					"lost_percent":	93.9683,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.00056,
+				"end":	3.00041,
+				"seconds":	0.999853,
+				"bytes":	933888,
+				"bits_per_second":	7.4722e+06,
+				"jitter_ms":	11.4703,
+				"lost_packets":	1776,
+				"packets":	1890,
+				"lost_percent":	93.9683,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	3.00041,
+					"end":	4.00034,
+					"seconds":	0.999933,
+					"bytes":	1662976,
+					"bits_per_second":	1.33047e+07,
+					"jitter_ms":	9.53589,
+					"lost_packets":	4925,
+					"packets":	5128,
+					"lost_percent":	96.0413,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.00041,
+				"end":	4.00034,
+				"seconds":	0.999933,
+				"bytes":	1662976,
+				"bits_per_second":	1.33047e+07,
+				"jitter_ms":	9.53589,
+				"lost_packets":	4925,
+				"packets":	5128,
+				"lost_percent":	96.0413,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	4.00034,
+					"end":	5.00069,
+					"seconds":	1.00035,
+					"bytes":	1155072,
+					"bits_per_second":	9.23736e+06,
+					"jitter_ms":	6.15695,
+					"lost_packets":	2133,
+					"packets":	2274,
+					"lost_percent":	93.7995,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.00034,
+				"end":	5.00069,
+				"seconds":	1.00035,
+				"bytes":	1155072,
+				"bits_per_second":	9.23736e+06,
+				"jitter_ms":	6.15695,
+				"lost_packets":	2133,
+				"packets":	2274,
+				"lost_percent":	93.7995,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"udp":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00069,
+					"seconds":	5.00069,
+					"bytes":	131645440,
+					"bits_per_second":	2.10604e+08,
+					"jitter_ms":	20.8112,
+					"lost_packets":	14961,
+					"packets":	16014,
+					"lost_percent":	93.4245
+				}
+			}],
+		"sum":	{
+			"start":	0,
+			"end":	5.00069,
+			"seconds":	5.00069,
+			"bytes":	131645440,
+			"bits_per_second":	2.10604e+08,
+			"jitter_ms":	20.8112,
+			"lost_packets":	14961,
+			"packets":	16014,
+			"lost_percent":	93.4245
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	1.08786,
+			"host_user":	0.0642424,
+			"host_system":	1.02799,
+			"remote_total":	1.03102,
+			"remote_user":	0.127585,
+			"remote_system":	0.903434
+		}
+	}
+}, stderr: , ret: 0
+09-26 17:30:32.176 INFO IPERF Server TPT : 198.02 Mbits/s [CoexKPITest.py:iperf_result:141]
+09-26 17:30:37.184 INFO 25.105953216552734 [CoexKPITest.py:iperf_result:144]
+09-26 17:30:37.186 INFO IPERF Client TPT : 200.85 Mbits/s [CoexKPITest.py:iperf_result:147]
+09-26 17:30:37.200 DEBUG Stop standing subprocess 20693
+09-26 17:30:37.202 INFO [Test Case] test_A2DP_iperf_udp_dl PASS [base_test.py:_on_pass:253]
+09-26 17:30:37.204 INFO [Test Case] test_hfp_iperf_tcp_ul [base_test.py:exec_one_testcase:371]
+09-26 17:30:37.219 DEBUG Start standing subprocess with cmd: iperf3 -s -J -p 5002  > /tmp/logs/iPerf5002/IPerfServer,5002,5,0.log
+09-26 17:30:42.227 INFO /tmp/logs/iPerf5002/IPerfClient,5002,5.log [CoexKPITest.py:setup_test:77]
+09-26 17:30:48.770 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -w 512K'", stdout=b'{\n\t"start":\t{\n\t\t"connected":\t[{\n\t\t\t\t"socket":\t4,\n\t\t\t\t"local_host":\t"192.168.1.43",\n\t\t\t\t"local_port":\t41770,\n\t\t\t\t"remote_host":\t"192.168.1.4",\n\t\t\t\t"remote_port":\t5002\n\t\t\t}],\n\t\t"version":\t"iperf 3-ANDROID",\n\t\t"system_info":\t"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",\n\t\t"timestamp":\t{\n\t\t\t"time":\t"Tue, 26 Sep 2017 12:00:42 GMT",\n\t\t\t"timesecs":\t1506427242\n\t\t},\n\t\t"connecting_to":\t{\n\t\t\t"host":\t"192.168.1.4",\n\t\t\t"port":\t5002\n\t\t},\n\t\t"cookie":\t"localhost.1506427242.352796.7876837f",\n\t\t"tcp_mss_default":\t1448,\n\t\t"test_start":\t{\n\t\t\t"protocol":\t"TCP",\n\t\t\t"num_streams":\t1,\n\t\t\t"blksize":\t131072,\n\t\t\t"omit":\t0,\n\t\t\t"duration":\t5,\n\t\t\t"bytes":\t0,\n\t\t\t"blocks":\t0,\n\t\t\t"reverse":\t0\n\t\t}\n\t},\n\t"intervals":\t[{\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t1.0013,\n\t\t\t\t\t"seconds":\t1.0013,\n\t\t\t\t\t"bytes":\t348968,\n\t\t\t\t\t"bits_per_second":\t2.78811e+06,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t47784,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t0,\n\t\t\t\t"end":\t1.0013,\n\t\t\t\t"seconds":\t1.0013,\n\t\t\t\t"bytes":\t348968,\n\t\t\t\t"bits_per_second":\t2.78811e+06,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t1.0013,\n\t\t\t\t\t"end":\t2.00131,\n\t\t\t\t\t"seconds":\t1.00001,\n\t\t\t\t\t"bytes":\t120184,\n\t\t\t\t\t"bits_per_second":\t961463,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t52128,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t1.0013,\n\t\t\t\t"end":\t2.00131,\n\t\t\t\t"seconds":\t1.00001,\n\t\t\t\t"bytes":\t120184,\n\t\t\t\t"bits_per_second":\t961463,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t2.00131,\n\t\t\t\t\t"end":\t3.00017,\n\t\t\t\t\t"seconds":\t0.998862,\n\t\t\t\t\t"bytes":\t118736,\n\t\t\t\t\t"bits_per_second":\t950970,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t56472,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t2.00131,\n\t\t\t\t"end":\t3.00017,\n\t\t\t\t"seconds":\t0.998862,\n\t\t\t\t"bytes":\t118736,\n\t\t\t\t"bits_per_second":\t950970,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t3.00017,\n\t\t\t\t\t"end":\t4.00062,\n\t\t\t\t\t"seconds":\t1.00045,\n\t\t\t\t\t"bytes":\t153488,\n\t\t\t\t\t"bits_per_second":\t1.22736e+06,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t65160,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t3.00017,\n\t\t\t\t"end":\t4.00062,\n\t\t\t\t"seconds":\t1.00045,\n\t\t\t\t"bytes":\t153488,\n\t\t\t\t"bits_per_second":\t1.22736e+06,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t4.00062,\n\t\t\t\t\t"end":\t5.00065,\n\t\t\t\t\t"seconds":\t1.00003,\n\t\t\t\t\t"bytes":\t124528,\n\t\t\t\t\t"bits_per_second":\t996193,\n\t\t\t\t\t"retransmits":\t0,\n\t\t\t\t\t"snd_cwnd":\t79640,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t4.00062,\n\t\t\t\t"end":\t5.00065,\n\t\t\t\t"seconds":\t1.00003,\n\t\t\t\t"bytes":\t124528,\n\t\t\t\t"bits_per_second":\t996193,\n\t\t\t\t"retransmits":\t0,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}],\n\t"end":\t{\n\t\t"streams":\t[{\n\t\t\t\t"sender":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00065,\n\t\t\t\t\t"seconds":\t5.00065,\n\t\t\t\t\t"bytes":\t865904,\n\t\t\t\t\t"bits_per_second":\t1.38527e+06,\n\t\t\t\t\t"retransmits":\t0\n\t\t\t\t},\n\t\t\t\t"receiver":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00065,\n\t\t\t\t\t"seconds":\t5.00065,\n\t\t\t\t\t"bytes":\t612504,\n\t\t\t\t\t"bits_per_second":\t979879\n\t\t\t\t}\n\t\t\t}],\n\t\t"sum_sent":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00065,\n\t\t\t"seconds":\t5.00065,\n\t\t\t"bytes":\t865904,\n\t\t\t"bits_per_second":\t1.38527e+06,\n\t\t\t"retransmits":\t0\n\t\t},\n\t\t"sum_received":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00065,\n\t\t\t"seconds":\t5.00065,\n\t\t\t"bytes":\t612504,\n\t\t\t"bits_per_second":\t979879\n\t\t},\n\t\t"cpu_utilization_percent":\t{\n\t\t\t"host_total":\t1.48094,\n\t\t\t"host_user":\t1.21323,\n\t\t\t"host_system":\t0.319259,\n\t\t\t"remote_total":\t0.14433,\n\t\t\t"remote_user":\t0.037281,\n\t\t\t"remote_system":\t0.10705\n\t\t}\n\t}\n}\n', stderr=b'', exit_status=0, duration=6.542158126831055, did_timeout=False, encoding='utf-8')
+09-26 17:30:48.771 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -w 512K', stdout: {
+	"start":	{
+		"connected":	[{
+				"socket":	4,
+				"local_host":	"192.168.1.43",
+				"local_port":	41770,
+				"remote_host":	"192.168.1.4",
+				"remote_port":	5002
+			}],
+		"version":	"iperf 3-ANDROID",
+		"system_info":	"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 12:00:42 GMT",
+			"timesecs":	1506427242
+		},
+		"connecting_to":	{
+			"host":	"192.168.1.4",
+			"port":	5002
+		},
+		"cookie":	"localhost.1506427242.352796.7876837f",
+		"tcp_mss_default":	1448,
+		"test_start":	{
+			"protocol":	"TCP",
+			"num_streams":	1,
+			"blksize":	131072,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	0
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	4,
+					"start":	0,
+					"end":	1.0013,
+					"seconds":	1.0013,
+					"bytes":	348968,
+					"bits_per_second":	2.78811e+06,
+					"retransmits":	0,
+					"snd_cwnd":	47784,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.0013,
+				"seconds":	1.0013,
+				"bytes":	348968,
+				"bits_per_second":	2.78811e+06,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	1.0013,
+					"end":	2.00131,
+					"seconds":	1.00001,
+					"bytes":	120184,
+					"bits_per_second":	961463,
+					"retransmits":	0,
+					"snd_cwnd":	52128,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.0013,
+				"end":	2.00131,
+				"seconds":	1.00001,
+				"bytes":	120184,
+				"bits_per_second":	961463,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	2.00131,
+					"end":	3.00017,
+					"seconds":	0.998862,
+					"bytes":	118736,
+					"bits_per_second":	950970,
+					"retransmits":	0,
+					"snd_cwnd":	56472,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.00131,
+				"end":	3.00017,
+				"seconds":	0.998862,
+				"bytes":	118736,
+				"bits_per_second":	950970,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	3.00017,
+					"end":	4.00062,
+					"seconds":	1.00045,
+					"bytes":	153488,
+					"bits_per_second":	1.22736e+06,
+					"retransmits":	0,
+					"snd_cwnd":	65160,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.00017,
+				"end":	4.00062,
+				"seconds":	1.00045,
+				"bytes":	153488,
+				"bits_per_second":	1.22736e+06,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	4.00062,
+					"end":	5.00065,
+					"seconds":	1.00003,
+					"bytes":	124528,
+					"bits_per_second":	996193,
+					"retransmits":	0,
+					"snd_cwnd":	79640,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.00062,
+				"end":	5.00065,
+				"seconds":	1.00003,
+				"bytes":	124528,
+				"bits_per_second":	996193,
+				"retransmits":	0,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"sender":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00065,
+					"seconds":	5.00065,
+					"bytes":	865904,
+					"bits_per_second":	1.38527e+06,
+					"retransmits":	0
+				},
+				"receiver":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00065,
+					"seconds":	5.00065,
+					"bytes":	612504,
+					"bits_per_second":	979879
+				}
+			}],
+		"sum_sent":	{
+			"start":	0,
+			"end":	5.00065,
+			"seconds":	5.00065,
+			"bytes":	865904,
+			"bits_per_second":	1.38527e+06,
+			"retransmits":	0
+		},
+		"sum_received":	{
+			"start":	0,
+			"end":	5.00065,
+			"seconds":	5.00065,
+			"bytes":	612504,
+			"bits_per_second":	979879
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	1.48094,
+			"host_user":	1.21323,
+			"host_system":	0.319259,
+			"remote_total":	0.14433,
+			"remote_user":	0.037281,
+			"remote_system":	0.10705
+		}
+	}
+}, stderr: , ret: 0
+09-26 17:30:55.813 INFO [AndroidDevice|HT7370200547] No Ringing Event [tel_test_utils.py:_wait_for_ringing_event:722]
+09-26 17:30:55.849 ERROR [AndroidDevice|HT7370200547] callee didn't receive ring event or got into ringing state [tel_test_utils.py:wait_for_ringing_call_for_subscription:784][tel_test_utils.py:_wait_for_droid_in_state:2574][tel_test_utils.py:wait_and_answer_call_for_subscription:882]
+09-26 17:31:05.858 INFO [AndroidDevice|HT7370200547] No Ringing Event [tel_test_utils.py:_wait_for_ringing_event:722]
+09-26 17:31:05.896 ERROR [AndroidDevice|HT7370200547] callee didn't receive ring event or got into ringing state [tel_test_utils.py:wait_for_ringing_call_for_subscription:784][tel_test_utils.py:_wait_for_droid_in_state:2574][tel_test_utils.py:wait_and_answer_call_for_subscription:882]
+09-26 17:31:15.905 INFO [AndroidDevice|HT7370200547] No Ringing Event [tel_test_utils.py:_wait_for_ringing_event:722]
+09-26 17:31:15.979 ERROR [AndroidDevice|HT7370200547] callee didn't receive ring event or got into ringing state [tel_test_utils.py:wait_for_ringing_call_for_subscription:784][tel_test_utils.py:_wait_for_droid_in_state:2574][tel_test_utils.py:wait_and_answer_call_for_subscription:882]
+09-26 17:31:25.988 INFO [AndroidDevice|HT7370200547] No Ringing Event [tel_test_utils.py:_wait_for_ringing_event:722]
+09-26 17:31:26.030 ERROR [AndroidDevice|HT7370200547] callee didn't receive ring event or got into ringing state [tel_test_utils.py:wait_for_ringing_call_for_subscription:784][tel_test_utils.py:_wait_for_droid_in_state:2574][tel_test_utils.py:wait_and_answer_call_for_subscription:882]
+09-26 17:31:31.793 INFO [AndroidDevice|HT7370200547] Receive ringing event [tel_test_utils.py:_wait_for_ringing_event:720]
+09-26 17:31:31.795 INFO [AndroidDevice|HT7370200547] callee received ring event [tel_test_utils.py:wait_for_ringing_call_for_subscription:775]
+09-26 17:31:36.802 INFO [AndroidDevice|HT7370200547] Accept the ring call [tel_test_utils.py:wait_and_answer_call_for_subscription:886]
+09-26 17:31:36.834 INFO [AndroidDevice|HT7370200547] Call answered successfully. [tel_test_utils.py:wait_and_answer_call_for_subscription:892]
+09-26 17:31:44.914 INFO [AndroidDevice|HT7370200547] Hangup call. [tel_test_utils.py:hangup_call:1012]
+09-26 17:31:50.285 INFO IPERF Server TPT : 0.87 Mbits/s [CoexKPITest.py:iperf_result:129]
+09-26 17:31:55.292 INFO IPERF Client TPT : 1.32 Mbits/s [CoexKPITest.py:iperf_result:134]
+09-26 17:31:55.298 DEBUG Stop standing subprocess 20739
+09-26 17:31:55.300 INFO [Test Case] test_hfp_iperf_tcp_ul PASS [base_test.py:_on_pass:253]
+09-26 17:31:55.302 INFO [Test Case] test_hfp_iperf_tcp_dl [base_test.py:exec_one_testcase:371]
+09-26 17:31:55.309 DEBUG Start standing subprocess with cmd: iperf3 -s -J -p 5002  > /tmp/logs/iPerf5002/IPerfServer,5002,6,0.log
+09-26 17:32:00.317 INFO /tmp/logs/iPerf5002/IPerfClient,5002,6.log [CoexKPITest.py:setup_test:77]
+09-26 17:32:06.185 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -R  -w  512K'", stdout=b'{\n\t"start":\t{\n\t\t"connected":\t[{\n\t\t\t\t"socket":\t4,\n\t\t\t\t"local_host":\t"192.168.1.43",\n\t\t\t\t"local_port":\t41772,\n\t\t\t\t"remote_host":\t"192.168.1.4",\n\t\t\t\t"remote_port":\t5002\n\t\t\t}],\n\t\t"version":\t"iperf 3-ANDROID",\n\t\t"system_info":\t"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",\n\t\t"timestamp":\t{\n\t\t\t"time":\t"Tue, 26 Sep 2017 12:02:00 GMT",\n\t\t\t"timesecs":\t1506427320\n\t\t},\n\t\t"connecting_to":\t{\n\t\t\t"host":\t"192.168.1.4",\n\t\t\t"port":\t5002\n\t\t},\n\t\t"cookie":\t"localhost.1506427320.441891.171c1142",\n\t\t"tcp_mss_default":\t1448,\n\t\t"test_start":\t{\n\t\t\t"protocol":\t"TCP",\n\t\t\t"num_streams":\t1,\n\t\t\t"blksize":\t131072,\n\t\t\t"omit":\t0,\n\t\t\t"duration":\t5,\n\t\t\t"bytes":\t0,\n\t\t\t"blocks":\t0,\n\t\t\t"reverse":\t1\n\t\t}\n\t},\n\t"intervals":\t[{\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t1.00108,\n\t\t\t\t\t"seconds":\t1.00108,\n\t\t\t\t\t"bytes":\t735584,\n\t\t\t\t\t"bits_per_second":\t5.87831e+06,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t0,\n\t\t\t\t"end":\t1.00108,\n\t\t\t\t"seconds":\t1.00108,\n\t\t\t\t"bytes":\t735584,\n\t\t\t\t"bits_per_second":\t5.87831e+06,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t1.00108,\n\t\t\t\t\t"end":\t2.00093,\n\t\t\t\t\t"seconds":\t0.999848,\n\t\t\t\t\t"bytes":\t812328,\n\t\t\t\t\t"bits_per_second":\t6.49961e+06,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t1.00108,\n\t\t\t\t"end":\t2.00093,\n\t\t\t\t"seconds":\t0.999848,\n\t\t\t\t"bytes":\t812328,\n\t\t\t\t"bits_per_second":\t6.49961e+06,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t2.00093,\n\t\t\t\t\t"end":\t3.00174,\n\t\t\t\t\t"seconds":\t1.00082,\n\t\t\t\t\t"bytes":\t776128,\n\t\t\t\t\t"bits_per_second":\t6.20397e+06,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t2.00093,\n\t\t\t\t"end":\t3.00174,\n\t\t\t\t"seconds":\t1.00082,\n\t\t\t\t"bytes":\t776128,\n\t\t\t\t"bits_per_second":\t6.20397e+06,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t3.00174,\n\t\t\t\t\t"end":\t4.00174,\n\t\t\t\t\t"seconds":\t0.999993,\n\t\t\t\t\t"bytes":\t1007808,\n\t\t\t\t\t"bits_per_second":\t8.06252e+06,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t3.00174,\n\t\t\t\t"end":\t4.00174,\n\t\t\t\t"seconds":\t0.999993,\n\t\t\t\t"bytes":\t1007808,\n\t\t\t\t"bits_per_second":\t8.06252e+06,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t4.00174,\n\t\t\t\t\t"end":\t5.0004,\n\t\t\t\t\t"seconds":\t0.998667,\n\t\t\t\t\t"bytes":\t1526192,\n\t\t\t\t\t"bits_per_second":\t1.22258e+07,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t4.00174,\n\t\t\t\t"end":\t5.0004,\n\t\t\t\t"seconds":\t0.998667,\n\t\t\t\t"bytes":\t1526192,\n\t\t\t\t"bits_per_second":\t1.22258e+07,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}],\n\t"end":\t{\n\t\t"streams":\t[{\n\t\t\t\t"sender":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.0004,\n\t\t\t\t\t"seconds":\t5.0004,\n\t\t\t\t\t"bytes":\t4995600,\n\t\t\t\t\t"bits_per_second":\t7.99231e+06,\n\t\t\t\t\t"retransmits":\t21\n\t\t\t\t},\n\t\t\t\t"receiver":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.0004,\n\t\t\t\t\t"seconds":\t5.0004,\n\t\t\t\t\t"bytes":\t4989112,\n\t\t\t\t\t"bits_per_second":\t7.98193e+06\n\t\t\t\t}\n\t\t\t}],\n\t\t"sum_sent":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.0004,\n\t\t\t"seconds":\t5.0004,\n\t\t\t"bytes":\t4995600,\n\t\t\t"bits_per_second":\t7.99231e+06,\n\t\t\t"retransmits":\t21\n\t\t},\n\t\t"sum_received":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.0004,\n\t\t\t"seconds":\t5.0004,\n\t\t\t"bytes":\t4989112,\n\t\t\t"bits_per_second":\t7.98193e+06\n\t\t},\n\t\t"cpu_utilization_percent":\t{\n\t\t\t"host_total":\t2.67851,\n\t\t\t"host_user":\t0.706431,\n\t\t\t"host_system":\t1.99088,\n\t\t\t"remote_total":\t0.109661,\n\t\t\t"remote_user":\t0.038927,\n\t\t\t"remote_system":\t0.070705\n\t\t}\n\t}\n}\n', stderr=b'', exit_status=0, duration=5.8675103187561035, did_timeout=False, encoding='utf-8')
+09-26 17:32:06.185 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -R  -w  512K', stdout: {
+	"start":	{
+		"connected":	[{
+				"socket":	4,
+				"local_host":	"192.168.1.43",
+				"local_port":	41772,
+				"remote_host":	"192.168.1.4",
+				"remote_port":	5002
+			}],
+		"version":	"iperf 3-ANDROID",
+		"system_info":	"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 12:02:00 GMT",
+			"timesecs":	1506427320
+		},
+		"connecting_to":	{
+			"host":	"192.168.1.4",
+			"port":	5002
+		},
+		"cookie":	"localhost.1506427320.441891.171c1142",
+		"tcp_mss_default":	1448,
+		"test_start":	{
+			"protocol":	"TCP",
+			"num_streams":	1,
+			"blksize":	131072,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	1
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	4,
+					"start":	0,
+					"end":	1.00108,
+					"seconds":	1.00108,
+					"bytes":	735584,
+					"bits_per_second":	5.87831e+06,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.00108,
+				"seconds":	1.00108,
+				"bytes":	735584,
+				"bits_per_second":	5.87831e+06,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	1.00108,
+					"end":	2.00093,
+					"seconds":	0.999848,
+					"bytes":	812328,
+					"bits_per_second":	6.49961e+06,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.00108,
+				"end":	2.00093,
+				"seconds":	0.999848,
+				"bytes":	812328,
+				"bits_per_second":	6.49961e+06,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	2.00093,
+					"end":	3.00174,
+					"seconds":	1.00082,
+					"bytes":	776128,
+					"bits_per_second":	6.20397e+06,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.00093,
+				"end":	3.00174,
+				"seconds":	1.00082,
+				"bytes":	776128,
+				"bits_per_second":	6.20397e+06,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	3.00174,
+					"end":	4.00174,
+					"seconds":	0.999993,
+					"bytes":	1007808,
+					"bits_per_second":	8.06252e+06,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.00174,
+				"end":	4.00174,
+				"seconds":	0.999993,
+				"bytes":	1007808,
+				"bits_per_second":	8.06252e+06,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	4.00174,
+					"end":	5.0004,
+					"seconds":	0.998667,
+					"bytes":	1526192,
+					"bits_per_second":	1.22258e+07,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.00174,
+				"end":	5.0004,
+				"seconds":	0.998667,
+				"bytes":	1526192,
+				"bits_per_second":	1.22258e+07,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"sender":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.0004,
+					"seconds":	5.0004,
+					"bytes":	4995600,
+					"bits_per_second":	7.99231e+06,
+					"retransmits":	21
+				},
+				"receiver":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.0004,
+					"seconds":	5.0004,
+					"bytes":	4989112,
+					"bits_per_second":	7.98193e+06
+				}
+			}],
+		"sum_sent":	{
+			"start":	0,
+			"end":	5.0004,
+			"seconds":	5.0004,
+			"bytes":	4995600,
+			"bits_per_second":	7.99231e+06,
+			"retransmits":	21
+		},
+		"sum_received":	{
+			"start":	0,
+			"end":	5.0004,
+			"seconds":	5.0004,
+			"bytes":	4989112,
+			"bits_per_second":	7.98193e+06
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	2.67851,
+			"host_user":	0.706431,
+			"host_system":	1.99088,
+			"remote_total":	0.109661,
+			"remote_user":	0.038927,
+			"remote_system":	0.070705
+		}
+	}
+}, stderr: , ret: 0
+09-26 17:32:13.241 INFO [AndroidDevice|HT7370200547] No Ringing Event [tel_test_utils.py:_wait_for_ringing_event:722]
+09-26 17:32:13.288 ERROR [AndroidDevice|HT7370200547] callee didn't receive ring event or got into ringing state [tel_test_utils.py:wait_for_ringing_call_for_subscription:784][tel_test_utils.py:_wait_for_droid_in_state:2574][tel_test_utils.py:wait_and_answer_call_for_subscription:882]
+09-26 17:32:22.101 INFO [AndroidDevice|HT7370200547] Receive ringing event [tel_test_utils.py:_wait_for_ringing_event:720]
+09-26 17:32:22.103 INFO [AndroidDevice|HT7370200547] callee received ring event [tel_test_utils.py:wait_for_ringing_call_for_subscription:775]
+09-26 17:32:27.110 INFO [AndroidDevice|HT7370200547] Accept the ring call [tel_test_utils.py:wait_and_answer_call_for_subscription:886]
+09-26 17:32:27.166 INFO [AndroidDevice|HT7370200547] Call answered successfully. [tel_test_utils.py:wait_and_answer_call_for_subscription:892]
+09-26 17:32:35.205 INFO [AndroidDevice|HT7370200547] Hangup call. [tel_test_utils.py:hangup_call:1012]
+09-26 17:32:40.533 INFO IPERF Client TPT : 7.45 Mbits/s [CoexKPITest.py:iperf_result:117]
+09-26 17:32:45.537 INFO IPERF Server TPT : 7.61 Mbits/s [CoexKPITest.py:iperf_result:122]
+09-26 17:32:45.549 DEBUG Stop standing subprocess 20796
+09-26 17:32:45.552 INFO [Test Case] test_hfp_iperf_tcp_dl PASS [base_test.py:_on_pass:253]
+09-26 17:32:45.553 INFO [Test Case] test_hfp_iperf_udp_ul [base_test.py:exec_one_testcase:371]
+09-26 17:32:45.566 DEBUG Start standing subprocess with cmd: iperf3 -s -J -p 5002  > /tmp/logs/iPerf5002/IPerfServer,5002,7,0.log
+09-26 17:32:50.574 INFO /tmp/logs/iPerf5002/IPerfClient,5002,7.log [CoexKPITest.py:setup_test:77]
+09-26 17:32:56.217 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -u -b 200M'", stdout=b'{\n\t"start":\t{\n\t\t"connected":\t[{\n\t\t\t\t"socket":\t4,\n\t\t\t\t"local_host":\t"192.168.1.43",\n\t\t\t\t"local_port":\t48221,\n\t\t\t\t"remote_host":\t"192.168.1.4",\n\t\t\t\t"remote_port":\t5002\n\t\t\t}],\n\t\t"version":\t"iperf 3-ANDROID",\n\t\t"system_info":\t"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",\n\t\t"timestamp":\t{\n\t\t\t"time":\t"Tue, 26 Sep 2017 12:02:50 GMT",\n\t\t\t"timesecs":\t1506427370\n\t\t},\n\t\t"connecting_to":\t{\n\t\t\t"host":\t"192.168.1.4",\n\t\t\t"port":\t5002\n\t\t},\n\t\t"cookie":\t"localhost.1506427370.645643.10056410",\n\t\t"test_start":\t{\n\t\t\t"protocol":\t"UDP",\n\t\t\t"num_streams":\t1,\n\t\t\t"blksize":\t8192,\n\t\t\t"omit":\t0,\n\t\t\t"duration":\t5,\n\t\t\t"bytes":\t0,\n\t\t\t"blocks":\t0,\n\t\t\t"reverse":\t0\n\t\t}\n\t},\n\t"intervals":\t[{\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t1.00033,\n\t\t\t\t\t"seconds":\t1.00033,\n\t\t\t\t\t"bytes":\t131072,\n\t\t\t\t\t"bits_per_second":\t1.04823e+06,\n\t\t\t\t\t"packets":\t16,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t0,\n\t\t\t\t"end":\t1.00033,\n\t\t\t\t"seconds":\t1.00033,\n\t\t\t\t"bytes":\t131072,\n\t\t\t\t"bits_per_second":\t1.04823e+06,\n\t\t\t\t"packets":\t16,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t1.00033,\n\t\t\t\t\t"end":\t2.00046,\n\t\t\t\t\t"seconds":\t1.00014,\n\t\t\t\t\t"bytes":\t253952,\n\t\t\t\t\t"bits_per_second":\t2.03134e+06,\n\t\t\t\t\t"packets":\t31,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t1.00033,\n\t\t\t\t"end":\t2.00046,\n\t\t\t\t"seconds":\t1.00014,\n\t\t\t\t"bytes":\t253952,\n\t\t\t\t"bits_per_second":\t2.03134e+06,\n\t\t\t\t"packets":\t31,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t2.00046,\n\t\t\t\t\t"end":\t3.00015,\n\t\t\t\t\t"seconds":\t0.999689,\n\t\t\t\t\t"bytes":\t98304,\n\t\t\t\t\t"bits_per_second":\t786677,\n\t\t\t\t\t"packets":\t12,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t2.00046,\n\t\t\t\t"end":\t3.00015,\n\t\t\t\t"seconds":\t0.999689,\n\t\t\t\t"bytes":\t98304,\n\t\t\t\t"bits_per_second":\t786677,\n\t\t\t\t"packets":\t12,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t3.00015,\n\t\t\t\t\t"end":\t4.0002,\n\t\t\t\t\t"seconds":\t1.00005,\n\t\t\t\t\t"bytes":\t114688,\n\t\t\t\t\t"bits_per_second":\t917458,\n\t\t\t\t\t"packets":\t14,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t3.00015,\n\t\t\t\t"end":\t4.0002,\n\t\t\t\t"seconds":\t1.00005,\n\t\t\t\t"bytes":\t114688,\n\t\t\t\t"bits_per_second":\t917458,\n\t\t\t\t"packets":\t14,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t4.0002,\n\t\t\t\t\t"end":\t5.00037,\n\t\t\t\t\t"seconds":\t1.00016,\n\t\t\t\t\t"bytes":\t221184,\n\t\t\t\t\t"bits_per_second":\t1.76919e+06,\n\t\t\t\t\t"packets":\t27,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t4.0002,\n\t\t\t\t"end":\t5.00037,\n\t\t\t\t"seconds":\t1.00016,\n\t\t\t\t"bytes":\t221184,\n\t\t\t\t"bits_per_second":\t1.76919e+06,\n\t\t\t\t"packets":\t27,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}],\n\t"end":\t{\n\t\t"streams":\t[{\n\t\t\t\t"udp":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00037,\n\t\t\t\t\t"seconds":\t5.00037,\n\t\t\t\t\t"bytes":\t819200,\n\t\t\t\t\t"bits_per_second":\t1.31062e+06,\n\t\t\t\t\t"jitter_ms":\t41.238,\n\t\t\t\t\t"lost_packets":\t2,\n\t\t\t\t\t"packets":\t99,\n\t\t\t\t\t"lost_percent":\t2.0202\n\t\t\t\t}\n\t\t\t}],\n\t\t"sum":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00037,\n\t\t\t"seconds":\t5.00037,\n\t\t\t"bytes":\t819200,\n\t\t\t"bits_per_second":\t1.31062e+06,\n\t\t\t"jitter_ms":\t41.238,\n\t\t\t"lost_packets":\t2,\n\t\t\t"packets":\t99,\n\t\t\t"lost_percent":\t2.0202\n\t\t},\n\t\t"cpu_utilization_percent":\t{\n\t\t\t"host_total":\t2.46202,\n\t\t\t"host_user":\t0.386163,\n\t\t\t"host_system":\t2.12389,\n\t\t\t"remote_total":\t0.060374,\n\t\t\t"remote_user":\t0,\n\t\t\t"remote_system":\t0.060374\n\t\t}\n\t}\n}\n', stderr=b'', exit_status=0, duration=5.6420605182647705, did_timeout=False, encoding='utf-8')
+09-26 17:32:56.218 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -u -b 200M', stdout: {
+	"start":	{
+		"connected":	[{
+				"socket":	4,
+				"local_host":	"192.168.1.43",
+				"local_port":	48221,
+				"remote_host":	"192.168.1.4",
+				"remote_port":	5002
+			}],
+		"version":	"iperf 3-ANDROID",
+		"system_info":	"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 12:02:50 GMT",
+			"timesecs":	1506427370
+		},
+		"connecting_to":	{
+			"host":	"192.168.1.4",
+			"port":	5002
+		},
+		"cookie":	"localhost.1506427370.645643.10056410",
+		"test_start":	{
+			"protocol":	"UDP",
+			"num_streams":	1,
+			"blksize":	8192,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	0
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	4,
+					"start":	0,
+					"end":	1.00033,
+					"seconds":	1.00033,
+					"bytes":	131072,
+					"bits_per_second":	1.04823e+06,
+					"packets":	16,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.00033,
+				"seconds":	1.00033,
+				"bytes":	131072,
+				"bits_per_second":	1.04823e+06,
+				"packets":	16,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	1.00033,
+					"end":	2.00046,
+					"seconds":	1.00014,
+					"bytes":	253952,
+					"bits_per_second":	2.03134e+06,
+					"packets":	31,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.00033,
+				"end":	2.00046,
+				"seconds":	1.00014,
+				"bytes":	253952,
+				"bits_per_second":	2.03134e+06,
+				"packets":	31,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	2.00046,
+					"end":	3.00015,
+					"seconds":	0.999689,
+					"bytes":	98304,
+					"bits_per_second":	786677,
+					"packets":	12,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.00046,
+				"end":	3.00015,
+				"seconds":	0.999689,
+				"bytes":	98304,
+				"bits_per_second":	786677,
+				"packets":	12,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	3.00015,
+					"end":	4.0002,
+					"seconds":	1.00005,
+					"bytes":	114688,
+					"bits_per_second":	917458,
+					"packets":	14,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.00015,
+				"end":	4.0002,
+				"seconds":	1.00005,
+				"bytes":	114688,
+				"bits_per_second":	917458,
+				"packets":	14,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	4.0002,
+					"end":	5.00037,
+					"seconds":	1.00016,
+					"bytes":	221184,
+					"bits_per_second":	1.76919e+06,
+					"packets":	27,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.0002,
+				"end":	5.00037,
+				"seconds":	1.00016,
+				"bytes":	221184,
+				"bits_per_second":	1.76919e+06,
+				"packets":	27,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"udp":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00037,
+					"seconds":	5.00037,
+					"bytes":	819200,
+					"bits_per_second":	1.31062e+06,
+					"jitter_ms":	41.238,
+					"lost_packets":	2,
+					"packets":	99,
+					"lost_percent":	2.0202
+				}
+			}],
+		"sum":	{
+			"start":	0,
+			"end":	5.00037,
+			"seconds":	5.00037,
+			"bytes":	819200,
+			"bits_per_second":	1.31062e+06,
+			"jitter_ms":	41.238,
+			"lost_packets":	2,
+			"packets":	99,
+			"lost_percent":	2.0202
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	2.46202,
+			"host_user":	0.386163,
+			"host_system":	2.12389,
+			"remote_total":	0.060374,
+			"remote_user":	0,
+			"remote_system":	0.060374
+		}
+	}
+}, stderr: , ret: 0
+09-26 17:32:58.254 INFO [AndroidDevice|HT7370200547] Receive ringing event [tel_test_utils.py:_wait_for_ringing_event:720]
+09-26 17:32:58.256 INFO [AndroidDevice|HT7370200547] callee received ring event [tel_test_utils.py:wait_for_ringing_call_for_subscription:775]
+09-26 17:33:03.259 INFO [AndroidDevice|HT7370200547] Accept the ring call [tel_test_utils.py:wait_and_answer_call_for_subscription:886]
+09-26 17:33:03.318 INFO [AndroidDevice|HT7370200547] Call answered successfully. [tel_test_utils.py:wait_and_answer_call_for_subscription:892]
+09-26 17:33:11.469 INFO [AndroidDevice|HT7370200547] Hangup call. [tel_test_utils.py:hangup_call:1012]
+09-26 17:33:16.896 INFO IPERF Server TPT : 0.0 Mbits/s [CoexKPITest.py:iperf_result:141]
+09-26 17:33:21.903 INFO 0.15623807907104492 [CoexKPITest.py:iperf_result:144]
+09-26 17:33:21.905 INFO IPERF Client TPT : 1.25 Mbits/s [CoexKPITest.py:iperf_result:147]
+09-26 17:33:21.920 DEBUG Stop standing subprocess 20829
+09-26 17:33:21.922 INFO [Test Case] test_hfp_iperf_udp_ul PASS [base_test.py:_on_pass:253]
+09-26 17:33:21.923 INFO [Test Case] test_hfp_iperf_udp_dl [base_test.py:exec_one_testcase:371]
+09-26 17:33:21.940 DEBUG Start standing subprocess with cmd: iperf3 -s -J -p 5002  > /tmp/logs/iPerf5002/IPerfServer,5002,8,0.log
+09-26 17:33:26.943 INFO /tmp/logs/iPerf5002/IPerfClient,5002,8.log [CoexKPITest.py:setup_test:77]
+09-26 17:33:33.534 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -u -R -b 200M'", stdout=b'{\n\t"start":\t{\n\t\t"connected":\t[{\n\t\t\t\t"socket":\t4,\n\t\t\t\t"local_host":\t"192.168.1.43",\n\t\t\t\t"local_port":\t46700,\n\t\t\t\t"remote_host":\t"192.168.1.4",\n\t\t\t\t"remote_port":\t5002\n\t\t\t}],\n\t\t"version":\t"iperf 3-ANDROID",\n\t\t"system_info":\t"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",\n\t\t"timestamp":\t{\n\t\t\t"time":\t"Tue, 26 Sep 2017 12:03:27 GMT",\n\t\t\t"timesecs":\t1506427407\n\t\t},\n\t\t"connecting_to":\t{\n\t\t\t"host":\t"192.168.1.4",\n\t\t\t"port":\t5002\n\t\t},\n\t\t"cookie":\t"localhost.1506427407.098182.5ef9304f",\n\t\t"test_start":\t{\n\t\t\t"protocol":\t"UDP",\n\t\t\t"num_streams":\t1,\n\t\t\t"blksize":\t8192,\n\t\t\t"omit":\t0,\n\t\t\t"duration":\t5,\n\t\t\t"bytes":\t0,\n\t\t\t"blocks":\t0,\n\t\t\t"reverse":\t1\n\t\t}\n\t},\n\t"intervals":\t[{\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t1.0022,\n\t\t\t\t\t"seconds":\t1.0022,\n\t\t\t\t\t"bytes":\t2007040,\n\t\t\t\t\t"bits_per_second":\t1.60211e+07,\n\t\t\t\t\t"jitter_ms":\t4.89033,\n\t\t\t\t\t"lost_packets":\t8,\n\t\t\t\t\t"packets":\t253,\n\t\t\t\t\t"lost_percent":\t3.16206,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t0,\n\t\t\t\t"end":\t1.0022,\n\t\t\t\t"seconds":\t1.0022,\n\t\t\t\t"bytes":\t2007040,\n\t\t\t\t"bits_per_second":\t1.60211e+07,\n\t\t\t\t"jitter_ms":\t4.89033,\n\t\t\t\t"lost_packets":\t8,\n\t\t\t\t"packets":\t253,\n\t\t\t\t"lost_percent":\t3.16206,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t1.0022,\n\t\t\t\t\t"end":\t2.00025,\n\t\t\t\t\t"seconds":\t0.998049,\n\t\t\t\t\t"bytes":\t1720320,\n\t\t\t\t\t"bits_per_second":\t1.37895e+07,\n\t\t\t\t\t"jitter_ms":\t4.96835,\n\t\t\t\t\t"lost_packets":\t1904,\n\t\t\t\t\t"packets":\t2114,\n\t\t\t\t\t"lost_percent":\t90.0662,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t1.0022,\n\t\t\t\t"end":\t2.00025,\n\t\t\t\t"seconds":\t0.998049,\n\t\t\t\t"bytes":\t1720320,\n\t\t\t\t"bits_per_second":\t1.37895e+07,\n\t\t\t\t"jitter_ms":\t4.96835,\n\t\t\t\t"lost_packets":\t1904,\n\t\t\t\t"packets":\t2114,\n\t\t\t\t"lost_percent":\t90.0662,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t2.00025,\n\t\t\t\t\t"end":\t3.0002,\n\t\t\t\t\t"seconds":\t0.999947,\n\t\t\t\t\t"bytes":\t892928,\n\t\t\t\t\t"bits_per_second":\t7.1438e+06,\n\t\t\t\t\t"jitter_ms":\t16.1747,\n\t\t\t\t\t"lost_packets":\t2742,\n\t\t\t\t\t"packets":\t2851,\n\t\t\t\t\t"lost_percent":\t96.1768,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t2.00025,\n\t\t\t\t"end":\t3.0002,\n\t\t\t\t"seconds":\t0.999947,\n\t\t\t\t"bytes":\t892928,\n\t\t\t\t"bits_per_second":\t7.1438e+06,\n\t\t\t\t"jitter_ms":\t16.1747,\n\t\t\t\t"lost_packets":\t2742,\n\t\t\t\t"packets":\t2851,\n\t\t\t\t"lost_percent":\t96.1768,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t3.0002,\n\t\t\t\t\t"end":\t4.00032,\n\t\t\t\t\t"seconds":\t1.00012,\n\t\t\t\t\t"bytes":\t827392,\n\t\t\t\t\t"bits_per_second":\t6.61832e+06,\n\t\t\t\t\t"jitter_ms":\t11.3888,\n\t\t\t\t\t"lost_packets":\t831,\n\t\t\t\t\t"packets":\t932,\n\t\t\t\t\t"lost_percent":\t89.1631,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t3.0002,\n\t\t\t\t"end":\t4.00032,\n\t\t\t\t"seconds":\t1.00012,\n\t\t\t\t"bytes":\t827392,\n\t\t\t\t"bits_per_second":\t6.61832e+06,\n\t\t\t\t"jitter_ms":\t11.3888,\n\t\t\t\t"lost_packets":\t831,\n\t\t\t\t"packets":\t932,\n\t\t\t\t"lost_percent":\t89.1631,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}, {\n\t\t\t"streams":\t[{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t4.00032,\n\t\t\t\t\t"end":\t5.00033,\n\t\t\t\t\t"seconds":\t1.00001,\n\t\t\t\t\t"bytes":\t1343488,\n\t\t\t\t\t"bits_per_second":\t1.07478e+07,\n\t\t\t\t\t"jitter_ms":\t15.894,\n\t\t\t\t\t"lost_packets":\t3687,\n\t\t\t\t\t"packets":\t3851,\n\t\t\t\t\t"lost_percent":\t95.7414,\n\t\t\t\t\t"omitted":\tfalse\n\t\t\t\t}],\n\t\t\t"sum":\t{\n\t\t\t\t"start":\t4.00032,\n\t\t\t\t"end":\t5.00033,\n\t\t\t\t"seconds":\t1.00001,\n\t\t\t\t"bytes":\t1343488,\n\t\t\t\t"bits_per_second":\t1.07478e+07,\n\t\t\t\t"jitter_ms":\t15.894,\n\t\t\t\t"lost_packets":\t3687,\n\t\t\t\t"packets":\t3851,\n\t\t\t\t"lost_percent":\t95.7414,\n\t\t\t\t"omitted":\tfalse\n\t\t\t}\n\t\t}],\n\t"end":\t{\n\t\t"streams":\t[{\n\t\t\t\t"udp":\t{\n\t\t\t\t\t"socket":\t4,\n\t\t\t\t\t"start":\t0,\n\t\t\t\t\t"end":\t5.00033,\n\t\t\t\t\t"seconds":\t5.00033,\n\t\t\t\t\t"bytes":\t131645440,\n\t\t\t\t\t"bits_per_second":\t2.10619e+08,\n\t\t\t\t\t"jitter_ms":\t5.2683,\n\t\t\t\t\t"lost_packets":\t14691,\n\t\t\t\t\t"packets":\t15760,\n\t\t\t\t\t"lost_percent":\t93.217\n\t\t\t\t}\n\t\t\t}],\n\t\t"sum":\t{\n\t\t\t"start":\t0,\n\t\t\t"end":\t5.00033,\n\t\t\t"seconds":\t5.00033,\n\t\t\t"bytes":\t131645440,\n\t\t\t"bits_per_second":\t2.10619e+08,\n\t\t\t"jitter_ms":\t5.2683,\n\t\t\t"lost_packets":\t14691,\n\t\t\t"packets":\t15760,\n\t\t\t"lost_percent":\t93.217\n\t\t},\n\t\t"cpu_utilization_percent":\t{\n\t\t\t"host_total":\t1.22959,\n\t\t\t"host_user":\t0.257368,\n\t\t\t"host_system":\t1.02943,\n\t\t\t"remote_total":\t4.23769,\n\t\t\t"remote_user":\t0.599923,\n\t\t\t"remote_system":\t3.63777\n\t\t}\n\t}\n}\n', stderr=b'', exit_status=0, duration=6.589774131774902, did_timeout=False, encoding='utf-8')
+09-26 17:33:33.534 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'iperf3 -c 192.168.1.4 -i1 -t 5 -p5002 -J -u -R -b 200M', stdout: {
+	"start":	{
+		"connected":	[{
+				"socket":	4,
+				"local_host":	"192.168.1.43",
+				"local_port":	46700,
+				"remote_host":	"192.168.1.4",
+				"remote_port":	5002
+			}],
+		"version":	"iperf 3-ANDROID",
+		"system_info":	"Linux localhost 3.18.52-g06de20685970 #1 SMP PREEMPT Fri Jun 23 19:50:11 UTC 2017 aarch64",
+		"timestamp":	{
+			"time":	"Tue, 26 Sep 2017 12:03:27 GMT",
+			"timesecs":	1506427407
+		},
+		"connecting_to":	{
+			"host":	"192.168.1.4",
+			"port":	5002
+		},
+		"cookie":	"localhost.1506427407.098182.5ef9304f",
+		"test_start":	{
+			"protocol":	"UDP",
+			"num_streams":	1,
+			"blksize":	8192,
+			"omit":	0,
+			"duration":	5,
+			"bytes":	0,
+			"blocks":	0,
+			"reverse":	1
+		}
+	},
+	"intervals":	[{
+			"streams":	[{
+					"socket":	4,
+					"start":	0,
+					"end":	1.0022,
+					"seconds":	1.0022,
+					"bytes":	2007040,
+					"bits_per_second":	1.60211e+07,
+					"jitter_ms":	4.89033,
+					"lost_packets":	8,
+					"packets":	253,
+					"lost_percent":	3.16206,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	0,
+				"end":	1.0022,
+				"seconds":	1.0022,
+				"bytes":	2007040,
+				"bits_per_second":	1.60211e+07,
+				"jitter_ms":	4.89033,
+				"lost_packets":	8,
+				"packets":	253,
+				"lost_percent":	3.16206,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	1.0022,
+					"end":	2.00025,
+					"seconds":	0.998049,
+					"bytes":	1720320,
+					"bits_per_second":	1.37895e+07,
+					"jitter_ms":	4.96835,
+					"lost_packets":	1904,
+					"packets":	2114,
+					"lost_percent":	90.0662,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	1.0022,
+				"end":	2.00025,
+				"seconds":	0.998049,
+				"bytes":	1720320,
+				"bits_per_second":	1.37895e+07,
+				"jitter_ms":	4.96835,
+				"lost_packets":	1904,
+				"packets":	2114,
+				"lost_percent":	90.0662,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	2.00025,
+					"end":	3.0002,
+					"seconds":	0.999947,
+					"bytes":	892928,
+					"bits_per_second":	7.1438e+06,
+					"jitter_ms":	16.1747,
+					"lost_packets":	2742,
+					"packets":	2851,
+					"lost_percent":	96.1768,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	2.00025,
+				"end":	3.0002,
+				"seconds":	0.999947,
+				"bytes":	892928,
+				"bits_per_second":	7.1438e+06,
+				"jitter_ms":	16.1747,
+				"lost_packets":	2742,
+				"packets":	2851,
+				"lost_percent":	96.1768,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	3.0002,
+					"end":	4.00032,
+					"seconds":	1.00012,
+					"bytes":	827392,
+					"bits_per_second":	6.61832e+06,
+					"jitter_ms":	11.3888,
+					"lost_packets":	831,
+					"packets":	932,
+					"lost_percent":	89.1631,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	3.0002,
+				"end":	4.00032,
+				"seconds":	1.00012,
+				"bytes":	827392,
+				"bits_per_second":	6.61832e+06,
+				"jitter_ms":	11.3888,
+				"lost_packets":	831,
+				"packets":	932,
+				"lost_percent":	89.1631,
+				"omitted":	false
+			}
+		}, {
+			"streams":	[{
+					"socket":	4,
+					"start":	4.00032,
+					"end":	5.00033,
+					"seconds":	1.00001,
+					"bytes":	1343488,
+					"bits_per_second":	1.07478e+07,
+					"jitter_ms":	15.894,
+					"lost_packets":	3687,
+					"packets":	3851,
+					"lost_percent":	95.7414,
+					"omitted":	false
+				}],
+			"sum":	{
+				"start":	4.00032,
+				"end":	5.00033,
+				"seconds":	1.00001,
+				"bytes":	1343488,
+				"bits_per_second":	1.07478e+07,
+				"jitter_ms":	15.894,
+				"lost_packets":	3687,
+				"packets":	3851,
+				"lost_percent":	95.7414,
+				"omitted":	false
+			}
+		}],
+	"end":	{
+		"streams":	[{
+				"udp":	{
+					"socket":	4,
+					"start":	0,
+					"end":	5.00033,
+					"seconds":	5.00033,
+					"bytes":	131645440,
+					"bits_per_second":	2.10619e+08,
+					"jitter_ms":	5.2683,
+					"lost_packets":	14691,
+					"packets":	15760,
+					"lost_percent":	93.217
+				}
+			}],
+		"sum":	{
+			"start":	0,
+			"end":	5.00033,
+			"seconds":	5.00033,
+			"bytes":	131645440,
+			"bits_per_second":	2.10619e+08,
+			"jitter_ms":	5.2683,
+			"lost_packets":	14691,
+			"packets":	15760,
+			"lost_percent":	93.217
+		},
+		"cpu_utilization_percent":	{
+			"host_total":	1.22959,
+			"host_user":	0.257368,
+			"host_system":	1.02943,
+			"remote_total":	4.23769,
+			"remote_user":	0.599923,
+			"remote_system":	3.63777
+		}
+	}
+}, stderr: , ret: 0
+09-26 17:33:40.566 INFO [AndroidDevice|HT7370200547] No Ringing Event [tel_test_utils.py:_wait_for_ringing_event:722]
+09-26 17:33:40.592 ERROR [AndroidDevice|HT7370200547] callee didn't receive ring event or got into ringing state [tel_test_utils.py:wait_for_ringing_call_for_subscription:784][tel_test_utils.py:_wait_for_droid_in_state:2574][tel_test_utils.py:wait_and_answer_call_for_subscription:882]
+09-26 17:33:50.063 INFO [AndroidDevice|HT7370200547] Receive ringing event [tel_test_utils.py:_wait_for_ringing_event:720]
+09-26 17:33:50.065 INFO [AndroidDevice|HT7370200547] callee received ring event [tel_test_utils.py:wait_for_ringing_call_for_subscription:775]
+09-26 17:33:55.072 INFO [AndroidDevice|HT7370200547] Accept the ring call [tel_test_utils.py:wait_and_answer_call_for_subscription:886]
+09-26 17:33:55.101 INFO [AndroidDevice|HT7370200547] Call answered successfully. [tel_test_utils.py:wait_and_answer_call_for_subscription:892]
+09-26 17:34:03.185 INFO [AndroidDevice|HT7370200547] Hangup call. [tel_test_utils.py:hangup_call:1012]
+09-26 17:34:08.691 INFO IPERF Server TPT : 198.64 Mbits/s [CoexKPITest.py:iperf_result:141]
+09-26 17:34:13.697 INFO 25.107741355895996 [CoexKPITest.py:iperf_result:144]
+09-26 17:34:13.699 INFO IPERF Client TPT : 200.86 Mbits/s [CoexKPITest.py:iperf_result:147]
+09-26 17:34:13.711 DEBUG Stop standing subprocess 20853
+09-26 17:34:13.714 INFO [Test Case] test_hfp_iperf_udp_dl PASS [base_test.py:_on_pass:253]
+09-26 17:34:13.936 INFO [AndroidDevice|HT7370200547] Setting Wi-Fi state to False. [wifi_test_utils.py:_wifi_toggle_state:551]
+09-26 17:34:14.129 INFO Summary for test class CoexKPITest: Blocked 0, ControllerInfo {}, Executed 8, Failed 0, Passed 8, Requested 8, Skipped 0, Unknown 0 [base_test.py:run:670]
+09-26 17:34:14.130 DEBUG Destroying android_devices.
+09-26 17:34:14.130 DEBUG Stop standing subprocess 20535
+09-26 17:34:14.132 INFO [AndroidDevice|HT7370200547] Clear event dispatcher session 1 [android_device.py:terminate_session:1066]
+09-26 17:34:14.134 INFO [AndroidDevice|HT7370200547] Close sl4a session 1 [android_device.py:terminate_session:1071]
+09-26 17:34:14.150 DEBUG job.Result(command='/usr/bin/adb -s HT7370200547 forward --remove tcp:38373', stdout=b'', stderr=b'', exit_status=0, duration=0.004085540771484375, did_timeout=False, encoding='utf-8')
+09-26 17:34:14.150 DEBUG cmd: /usr/bin/adb -s HT7370200547 forward --remove tcp:38373, stdout: , stderr: , ret: 0
+09-26 17:34:14.298 DEBUG job.Result(command="/usr/bin/adb -s HT7370200547 shell 'am force-stop com.googlecode.android_scripting'", stdout=b'', stderr=b'', exit_status=0, duration=0.14803123474121094, did_timeout=False, encoding='utf-8')
+09-26 17:34:14.299 DEBUG cmd: /usr/bin/adb -s HT7370200547 shell 'am force-stop com.googlecode.android_scripting', stdout: , stderr: , ret: 0
+09-26 17:34:14.300 INFO Summary for test run bluetoothtestbed@09-26-2017_17-26-41-482: Blocked 0, ControllerInfo {'AndroidDevice': [{'build_type': 'userdebug', 'build_id': 'OPR6.170623.012', 'serial': 'HT7370200547', 'model': 'aosp_marlin'}]}, Executed 8, Failed 0, Passed 8, Requested 8, Skipped 0, Unknown 0
