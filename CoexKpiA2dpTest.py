@@ -5,24 +5,22 @@
 
 import os
 import time
+import threading
 
-from datetime import datetime
+from collections import defaultdict
+from collections import OrderedDict
+
+from acts.controllers.iperf_server import IPerfServer, IPerfResult
+from acts.test_utils.bt import BtEnum
 from acts.test_utils.bt.bt_test_utils import connect_dev_to_headset
 from acts.test_utils.bt.bt_test_utils import disconnect_headset_from_dev
 from acts.test_utils.bt.bt_test_utils import pair_dev_to_headset
-import threading
-from acts.base_test import BaseTestClass
-from acts.test_utils.wifi import wifi_test_utils as wutils
 from acts.test_utils.bt.bt_test_utils import enable_bluetooth
 from acts.test_utils.bt.bt_test_utils import disable_bluetooth
-from acts.controllers.iperf_server import IPerfServer, IPerfResult
-from collections import defaultdict
-from acts.test_utils.tel import tel_test_utils
-from acts.test_utils.bt import bt_test_utils
-from acts.base_test import BaseTestClass
-from acts.test_utils.bt import BtEnum
-from collections import OrderedDict
 from acts.test_utils.bt.BluetoothBaseTest import BluetoothBaseTest
+
+from acts.test_utils.wifi import wifi_test_utils as wutils
+
 
 class CoexKpiA2dpTest(BluetoothBaseTest):
     interval = "-i1 -t 5 -p"
@@ -42,7 +40,7 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
 
     def setup_class(self):
 
-        self.result_dict=defaultdict(list)
+        self.result_dict = defaultdict(list)
         self.dev = self.android_devices[0]
         self.network = self.user_params["network"]
         self.dev1=self.android_devices[1]
@@ -51,8 +49,6 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         self.tag = 0
         wutils.wifi_test_device_init(self.dev)
         wutils.wifi_connect(self.dev, self.network)
-
-
 
     def setup_test(self):
         self.iperf_server = IPerfServer(self.port, self.path)
@@ -76,9 +72,6 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         return True
 
     '''Helper Functions'''
-
-
-
 
     def iperf_result(self, uplink=False, udp=False):
 
@@ -155,11 +148,6 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
                 f.write((result[i]))
                 f.write("\n")
 
-
-
-    ''' Tests '''
-
-
     def is_a2dp_connected(self):
         devices = self.dev.droid.bluetoothA2dpGetConnectedDevices()
         for device in devices:
@@ -195,7 +183,6 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
 
         return True
 
-
     def a2dp_long_duration(self):
         
         if not pair_dev_to_headset(self.log, self.dev, self.headset_mac_addr):
@@ -210,12 +197,12 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
             self.log.error("Could not start stream at {}".format(
                 self.dev.getBuildSerial()))
             return False
-
-
         return True
 
-
+    ''' Tests '''
+    
     def test_A2DP_iperf_tcp_ul_kpi_017(self):
+
         stream_time = time.time() + self.duration
 
         if  not self.a2dp_long_duration():
@@ -230,10 +217,8 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         result = self.iperf_result(uplink=True)
         t.join()
 
-
-
-
     def test_A2DP_iperf_tcp_dl_kpi_018(self):
+
         stream_time = time.time() + self.duration
 
         if  not self.a2dp_long_duration():
@@ -249,6 +234,7 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         t.join()
 
     def test_A2DP_iperf_udp_ul_kpi_019(self):
+
         stream_time = time.time() + self.duration
         if  not self.a2dp_long_duration():
             self.log.info("A2DP streaming failed")
@@ -262,6 +248,7 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         t.join()
 
     def test_A2DP_iperf_udp_dl_020(self):
+
         stream_time = time.time() + self.duration
         if not  self.a2dp_long_duration():
             self.log.info("A2DP streaming failed")
@@ -274,13 +261,6 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         iperf_tp = self.iperf_log_parser(status, result)
         result = self.iperf_result(uplink=True,udp=True)
         t.join()
-
-    def iperf_thread(self,arg=" ",arg1=" ",arg2 = " ",arg3 = " "):
-
-        status, result = self.dev.run_iperf_client(self.user_params["server_addr"],
-                                                   self.interval + self.port  + " -J" + arg +arg1 + arg2 + arg3 )
-        iperf_tp = self.iperf_log_parser(status, result)
-
 
    
 
