@@ -29,7 +29,7 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         BluetoothBaseTest.__init__(self, controllers)
         self.headset_mac_addr = "E4:22:A5:0B:C1:66"
         self.Ip_Address = "192.168.1.9"
-        self.path1 = "original_dance_audio.mp3"
+        self.path_to_audio = "original_dance_audio.mp3"
         self.duration=30.0
         self.tests = (
             'test_A2DP_iperf_tcp_ul_kpi_017',
@@ -45,18 +45,18 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
         self.network = self.user_params["network"]
         self.dev1=self.android_devices[1]
         self.port = "5033"
-        self.path = "/tmp/logs/"
+        self.path_to_logs = "/tmp/logs/"
         self.tag = 0
         wutils.wifi_test_device_init(self.dev)
         wutils.wifi_connect(self.dev, self.network)
 
     def setup_test(self):
-        self.iperf_server = IPerfServer(self.port, self.path)
+        self.iperf_server = IPerfServer(self.port, self.path_to_logs)
         self.tag = self.tag + 1
         self.iperf_server.start(tag=str(self.tag))
         out_file_name = "iPerf{}/IPerfClient,{},{}.log".format(
             self.port, self.port, self.tag)
-        self.client_file_name = os.path.join(self.path, out_file_name)
+        self.client_file_name = os.path.join(self.path_to_logs, out_file_name)
         self.log.info(self.client_file_name)
 
     def teardown_class(self):
@@ -90,7 +90,7 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
 
         if not udp:
             if not uplink:
-                result = IPerfResult(self.path + "iPerf{}/IPerfServer,{},{},0.log"
+                result = IPerfResult(self.path_to_logs + "iPerf{}/IPerfServer,{},{},0.log"
                                      .format(self.port, self.port, self.tag))
                 throughput = result.avg_send_rate
                 self.log.info("IPERF Client TPT : {} Mbits/s".format(
@@ -102,7 +102,7 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
                     throughput))
                 return throughput
 
-            result = IPerfResult(self.path + "iPerf{}/IPerfServer,{},{},0.log"
+            result = IPerfResult(self.path_to_logs + "iPerf{}/IPerfServer,{},{},0.log"
                                      .format(self.port, self.port, self.tag))
             throughput = result.avg_receive_rate
             self.log.info("IPERF Server TPT : {} Mbits/s".format(
@@ -114,7 +114,7 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
                     throughput))
             return throughput
 
-        result = IPerfResult(self.path + "iPerf{}/IPerfServer,{},{},0.log".
+        result = IPerfResult(self.path_to_logs + "iPerf{}/IPerfServer,{},{},0.log".
                                  format(self.port, self.port, self.tag))
         throughput = result.avg_rate
         self.log.info("IPERF Server TPT : {} Mbits/s".format(
@@ -161,7 +161,7 @@ class CoexKpiA2dpTest(BluetoothBaseTest):
 
         self.log.info("Starting music stream")
         if not (self.dev.droid.mediaPlayOpen("file:///sdcard/Music/{}"
-                                                     .format(self.path1))):
+                                                     .format(self.path_to_audio))):
             self.log.error("Failed to play music")
             return False
         self.dev.droid.mediaPlaySetLooping(True)
